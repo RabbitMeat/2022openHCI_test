@@ -15,34 +15,36 @@ function canvas_detect() {
     let content;
     if( useragent.indexOf('iphone') != -1 || useragent.indexOf('ipad') != -1 || useragent.indexOf('ipod') != -1){ //ios
         isIOS = true;
+        alert("is IOS");
     }
     else{
         let content = `<canvas id="tower-canvas" width="100%" style="position: fixed;"></canvas>`;
         background += content;
+        alert("not IOS");
     }
     content = `<div class="background-image" max-width="100%" style="position: fixed;"></div>`;
     background += content;
+    console.log("canvas test");
 
-    backgroundSection.insertAdjacentHTML("afterBegin", background);
+    backgroundSection.insertAdjacentHTML("beforeend", background);
 }
 canvas_detect();
 
 $(function() {
+    let windowHeight = window.innerHeight;
+    let windowWidth = window.innerWidth;
+    //console.log('window h = ' + windowHeight);
+
+
     // test if ios;
     if(!isIOS ){ // not ios
         // model position control
-        let windowSize = window.matchMedia("(min-width: 768px)")
-        let mainTower;
-        function modelControl(size) {
-            if (size.matches) { // If media query matches
-                mainTower = main(750, -20, true);
-            } else {
-                mainTower = main(485, 0, false);
-            }
+        let mainTower; 
+        if(!isIOS){
+            if(windowWidth >= 768) mainTower = main(750, -20, true);
+            else mainTower = main(485, 0, false);
             mainTower;
         }
-        modelControl(windowSize) // Call listener function at run time
-        windowSize.addListener(modelControl);  
     }
       
 //btn open
@@ -100,10 +102,6 @@ $(function() {
     //    console.log(i+'p=' +position);
     //    console.log(i+'ap=' +ah);
     }
-
-    let windowHeight = window.innerHeight;
-    let windowWidth = window.innerWidth;
-    //console.log('window h = ' + windowHeight);
 
     $(document).scroll(function() {
         $('html,body').scrollLeft(0);
