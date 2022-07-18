@@ -5,20 +5,26 @@ let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
+let isIOS = false;
+
 $(function() {
-// model position control
-    let windowSize = window.matchMedia("(min-width: 768px)")
-    let mainTower;
-    function modelControl(size) {
-        if (size.matches) { // If media query matches
-            mainTower = main(750, -20, true);
-        } else {
-            mainTower = main(485, 0, false);
+    // test if ios;
+    if(!isIOS ){ // not ios
+        // model position control
+        let windowSize = window.matchMedia("(min-width: 768px)")
+        let mainTower;
+        function modelControl(size) {
+            if (size.matches) { // If media query matches
+                mainTower = main(750, -20, true);
+            } else {
+                mainTower = main(485, 0, false);
+            }
+            mainTower;
         }
-        mainTower;
+        modelControl(windowSize) // Call listener function at run time
+        windowSize.addListener(modelControl);  
     }
-    modelControl(windowSize) // Call listener function at run time
-    windowSize.addListener(modelControl);    
+      
 //btn open
     $(".panel-collapse").on('show.bs.collapse', function() {
         $(this).siblings('.card_a_close').addClass('active');
@@ -480,6 +486,27 @@ const speakerInfo = [{
     "speech_title": "敬請期待",
     "speech_description": ""
 }]
+
+function canvas_detect() {
+    const backgroundSection = document.querySelector(".back-tower");
+    let background = ``;
+    let useragent = navigator.userAgent;
+    useragent = useragent.toLowerCase();
+    
+    let content;
+    if( useragent.indexOf('iphone') != -1 || useragent.indexOf('ipad') != -1 || useragent.indexOf('ipod') != -1){ //ios
+        isIOS = true;
+    }
+    else{
+        let content = `<canvas id="tower-canvas" width="100%" style="position: fixed;"></canvas>`;
+        background += content;
+    }
+    content = `<div class="background-image" max-width="100%" style="position: fixed;"></div>`;
+    background += content;
+
+    backgroundSection.insertAdjacentHTML("afterBegin", background);
+}
+canvas_detect();
 
 function group_information_insertion() {
     const groupSection = document.querySelector("#Group .box");
