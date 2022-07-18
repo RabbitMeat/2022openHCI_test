@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="./image/OpenHCI22_logo.png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://kit.fontawesome.com/cbd91073cd.js" crossorigin="anonymous"></script>
+        <title>OpenHCI 2022</title>
+        <link href="css/main.css" rel="stylesheet">
+    </head>
+
+    <body>
+    
+    <!-- top navbar phone -->
+    <nav class="navbar sticky-top navbar-dark navbar-phone"  id="top_navbar_phone">
+        <!-- only appear when phone -->
+        <a class="navbar-brand nav-link" href="#home">
+            <img src="image/cyberoasis-clear.png" style="height: 80%; width:auto;"  alt="">
+        </a>
+        <a class="navbar-brand top-button" style="float: right;">
+            <button type="button" class="cta_btn" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScXBW5Z-xjLmo55iADtUDajNS3eGo_OYl8kx2GOh-LEo0O-uA/viewform')">前往報名</button>
+        </a>
+    </nav>
+    <!-- top navbar computer -->
+    <nav class="navbar sticky-top navbar-dark navbutton-com" id="top_navbar_computer">
+        <!-- only appear when phone -->
+        <a class="navbar-brand nav-link navbutton-com" href="#home">
+            <img src="image/logo.png" alt="">
+        </a>
+        <a class="navbar-brand nav-link navbutton-com" href="#home">
+            <img src="image/cyberoasis.png" alt="" style="filter: drop-shadow(0px 0px 8px #6BAC9A);">
+        </a>
+        <!-- only appear when computer -->
+        <a class="navbar-brand navbutton-com" style="float: right;">
+            <button type="button" class="cta_btn" style="max-height: 100%;" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScXBW5Z-xjLmo55iADtUDajNS3eGo_OYl8kx2GOh-LEo0O-uA/viewform')">我要報名！</button>
+        </a>
+    </nav>
+
+    <!-- bottom navbar phone -->
+    <nav class="navbar navbar-dark fixed-bottom navbar-bottom-phone justify-content-end" style="background: none; padding-bottom: 5vh;" id="bottom_navbar">
+        <!-- only appear when phone -->
+        <div class="navbar-brand nav-link navbar-phone menu-control menu-shadow" style="float: right;" href="#home">
+            <p style="font-size: 1em;">MENU</p>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        style="margin-right: 1rem;">
+        <i class="fa fa-navicon menu-shadow"></i>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link active" id="menu0" href="#theme">工作坊介紹</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="menu1" href="#speaker">講者陣容</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="menu2" href="#schedule">詳細日程表</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="menu3" href="#Apply">報名步驟</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="menu4" href="#FAQ">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="menu5" href="#Previous">歷屆作品</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="menu6" href="#Group">籌辦團隊</a>
+              </li>
+              <li class="nav-item">
+                <button class="navbar-toggler in-menu" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent">
+                    <!-- .navbar-toggler-icon 漢堡式選單Icon -->
+                    <i class="fas fa-times"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        
+    </nav>
+    
+    <div class="back-tower">
+        <canvas id="tower-canvas" width="100%" style="position: fixed;"></canvas>
+        <div class="background-image" width="100%" style="position: fixed;"></div>
+    </div>
+
+        <div id="home_href"></div>
+        <!-- section home-->  
+        <section id = "home">
+            <div class="main_phone">
+                <div class="row">
+                    <p>第12屆OpenHCI人機互動工作坊</p>
+                    <img src="image/cyberoasis.png" class="col-10" style="height: auto; filter: drop-shadow(0px 0px 24px #6BAC9A);">
+                    <img src="image/date.svg" class="col-10" style="margin-top: 10vh; max-width: 80%;">
+                </div>
+            </div>
+            <div class = "box main_title row" style="height: 60vh;">
+                <div class="box-title T-C col-md-8 align-self-start">第1 2 屆O p e n H C I 人機互動工作坊</div>
+                <img src="image/cyberoasis.png" class="col-11 offset-col-1">
+                <nav class="side-nav col-12">
+                    <ul style="list-style:none">
+                        <li class="slide-nav-items">
+                            <a class="nav-link" href="#theme">
+                                <span class="slide-text">工作坊介紹</span>
+                                <img class="side-nav-icon" src="image/tree.png">
+                            </a>
+                        </li>
+                        <li class="slide-nav-items">
+                            <a class="nav-link" href="#speaker">
+                                <span class="slide-text">講者陣容</span>
+                                <img class="side-nav-icon" src="image/tree.png">
+                            </a>
+                        </li>
+                        <li class="slide-nav-items">
+                            <a class="nav-link" href="#schedule">
+                                <span class="slide-text">詳細日程表</span>
+                                <img class="side-nav-icon" src="image/tree.png">
+                            </a>
+                        </li>
+                        <li class="slide-nav-items">
+                            <a class="nav-link" href="#Apply">
+                                <span class="slide-text">報名步驟</span>
+                                <img class="side-nav-icon" src="image/tree.png">
+                            </a>
+                        </li>
+                        <li class="slide-nav-items">
+                            <a class="nav-link" href="#FAQ">
+                                <span class="slide-text">FAQ</span>
+                                <img class="side-nav-icon" src="image/tree.png">
+                            </a>
+                        </li>
+                        <li class="slide-nav-items">
+                            <a class="nav-link" href="#Previous">
+                                <span class="slide-text">歷屆作品</span>
+                                <img class="side-nav-icon" src="image/tree.png">
+                            </a>
+                        </li>
+                        <li class="slide-nav-items">
+                            <a class="nav-link" href="#Group">
+                                <span class="slide-text">籌辦團隊</span>
+                                <img class="side-nav-icon" src="image/tree.png">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <!-- section theme-->
+        <section id = "theme">
+            <div class= "box">
+                <div class="box-title T-E">Cyberoasis</div>
+                <div class="box-title T-C">主題論述</div>
+                <div class="card_c">
+                    <card-title>
+                        <t-20>Cyberoasis 賽博綠洲</t-20>
+                    </card-title>
+                    <p>
+                        人類、科技與環境三方共融之處，是我們渴望打造的綠洲。<br><br>
+                        Cyber是人與科技產物的共融，而Oasis是人類對於理想未來的描繪。
+                        兩者結合將帶來衝擊與新生，從瞬時的靈感，到反覆的失敗與嘗試，再到生生不息的延續，考驗著人類如何與科技從共融達到共榮，乃至永續發展之道。<br><br>
+                        而你，想像中的CyberOasis，又是什麼模樣呢？
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id = "What_is_HCI">
+            <div class="box">
+                <div class="box-title T-E">What is HCI?</div>
+                <div class="box-title T-C">什麼是人機互動</div>
+
+                <div class="card_c">
+                    <card-title>
+                        <t-20>人機互動<t-20>
+                    </card-title>
+                    <p>
+                        Human-Computer Interaction(HCI)為近年來相當活躍的跨領域學門。
+                        相較於其他專門領域， HCI 學門獨特的複合特性，使得其創造過程需要高度的跨領域合作。
+                        研究的著眼點不但訴求技術、 更試圖從以人為本的角度去探討，以創造更佳的使用者經驗。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- section HCI intros-->
+        <section id = "HCI_intros">
+            <div class= "box">
+                <div class="box-title T-E">INTRO & GOALS</div>
+                <div class="box-title T-C">OpenHCI 簡易介紹</div>
+                <div class="card_c">
+                    <card-title>
+                        <t-20>History of OpenHCI<t-20>
+                    </card-title>
+                    <p>
+                        OpenHCI'22 是第十二屆由學生自治籌備的人機互動工作坊，旨在推廣人機互動學門與跨領域合作。
+                        在五天的工作坊期間，來自不同領域的學員會經歷一系列講座與課後實作演練，深入完整 HCI 設計流程，
+                        透過合作溝通以實踐構想，將無盡的創意展現給世界！
+                    </p>
+                    <card-title>
+                        <t-20>Goals<t-20>
+                    </card-title>
+                    <p>
+                        本活動希望能夠以推廣 HCI 為主要宗旨，招收工程、設計及跨領域背景的學生， 共同學習並進行跨領域的合作，探索人類生活空間中與周遭環境、物件或工具的互動模式。<br>
+                        為期五天的工作坊，期盼參與者能以此概念體察其日常經驗裡的互動缺口或議題， 實際動手解決問題或創造出新的意義，進而尋思更和諧的人機互動遠景。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- section Programs-->
+        <section id="Programs">
+            <div class= "box">
+                <div class="box-title T-E">Programs</div>
+                <div class="box-title T-C">工作坊課程簡介</div>
+
+                <div id="Programs_phone">
+                    <div class="schedule_box">
+                        <div class="card_d">
+                            <card-title>
+                                <t-20>前置工作坊<t-20>
+                            </card-title>
+                            <div>
+                                <p>8 / 13 - 8 / 14</p>
+                                <ls>
+                                    <li>聆聽人機互動先修演講</li>
+                                    <li>學習設計思考概念</li>
+                                    <li>了解基本 Arduino 和 Processing 技術</li>
+                                    <li>討論工作坊作品著重面向</li>
+                                </ls>
+                            </div>
+                            <div class="card_f">
+                                <button type="button" class="cta_btn nav-link" href="#schedule_href">詳細日程表</button>
+                            </div>
+                        </div>
+                        <div class="card_d">
+                            <card-title>
+                                <t-20>前置工作坊結束後兩週<t-20>
+                            </card-title>
+                            <div>
+                                <ls>
+                                    <li>蒐集資料</li>
+                                    <li>分析案例</li>
+                                    <li>確定作品主題</li>
+                                </ls>
+                                <p><p-s>（*過程中需花費較多時間及心力，因此建議先確定自己在這段期間能將重心放在工作坊上，再進行報名喔）</p-s></p>  
+                            </div>
+                        </div>
+                        <div class="card_d">
+                            <card-title>
+                                <t-20>正式工作坊<t-20>
+                            </card-title>
+                            <div>
+                                <p>8 / 26 - 8 / 28</p>
+                                <ls>
+                                    <li>聆聽人機互動實戰演講</li>
+                                    <li>與學 / 業界的學長姐對談</li>
+                                    <li>將作品想法轉化成現實</li>
+                                    <li>與顧問討論作品方向</li>
+                                    <li>在實體展覽分享成果，並獲得專業講評回饋</li>
+                                </ls>
+                            </div>
+                            <div class="card_f">
+                                <button type="button" class="cta_btn nav-link" href="#schedule_href">詳細日程表</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="carouselPrograms" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card_d">
+                                <card-title>
+                                    <t-20>前置工作坊<t-20>
+                                </card-title>
+                                <div>
+                                    <p>8 / 13 - 8 / 14</p>
+                                    <ls>
+                                        <li>聆聽人機互動先修演講</li>
+                                        <li>學習設計思考概念</li>
+                                        <li>了解基本 Arduino 和 Processing 技術</li>
+                                        <li>討論工作坊作品著重面向</li>
+                                    </ls>
+                                </div>
+                                <div class="card_f">
+                                    <button type="button" class="cta_btn nav-link" href="#schedule_href">詳細日程表</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card_d">
+                                <card-title>
+                                    <t-20>前置工作坊結束後兩週<t-20>
+                                </card-title>
+                                <div>
+                                    <ls>
+                                        <li>蒐集資料</li>
+                                        <li>分析案例</li>
+                                        <li>確定作品主題</li>
+                                    </ls>
+                                    <p><p-s>（*過程中需花費較多時間及心力，因此建議先確定自己在這段期間能將重心放在工作坊上，再進行報名喔）</p-s></p>  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card_d">
+                                <card-title>
+                                    <t-20>正式工作坊<t-20>
+                                </card-title>
+                                <div>
+                                    <p>8 / 26 - 8 / 28</p>
+                                    <ls>
+                                        <li>聆聽人機互動實戰演講</li>
+                                        <li>與學 / 業界的學長姐對談</li>
+                                        <li>將作品想法轉化成現實</li>
+                                        <li>與顧問討論作品方向</li>
+                                        <li>在實體展覽分享成果，並獲得專業講評回饋</li>
+                                    </ls>
+                                </div>
+                                <div class="card_f">
+                                    <button type="button" class="cta_btn nav-link" href="#schedule_href">詳細日程表</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a class="carousel-control-prev" href="#carouselPrograms" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselPrograms" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselPrograms" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselPrograms" data-slide-to="1"></li>
+                        <li data-target="#carouselPrograms" data-slide-to="2"></li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <div id="workshop_href"></div>
+        <!-- section workshop -->
+        <section id = "workshop">
+            <div class= "box">
+                <div class="box-title T-E">Workshop Info.</div>
+                <div class="box-title T-C">工作坊介紹</div>
+                <div class="card_c">
+                    <card-title><t-20>活動時間<t-20></card-title>
+                    <div>
+                        <p>今年工作坊分為兩部分，共 5 天：</p>
+                        <ls>
+                            <li>2 天的前置工作坊</li>
+                            <li>3 天的正式工作坊</li>
+                        </ls>
+                        <p>全日活動時間約為 8:30～20:00 （視各組討論時間而定）。</p>    
+                    </div>
+
+                    <card-title><t-20>活動地點<t-20></card-title>
+                    <div>
+                        <p>前置工作坊：國立臺灣科技大學</p>
+                        <p><p-s>（ 台北市大安區基隆路四段43號 ）</p-s></p>
+                        <p>正式工作坊：松菸創作者工廠</p>
+                        <p><p-s>（ 台北市信義區光復南路133號 ）</p-s></p> 
+                    </div>
+
+                    <card-title><t-20>活動費用<t-20></card-title>
+                    <div>
+                        <p>為推廣 HCI 學門，本活動免報名費，僅收取保證金、保險費用及其他費用。
+                            獲得錄取資格之學員，請於指定時間內繳交各項費用，繳費後方能取得正式資格。<br>
+                            為維持完整學習體驗，工作坊實行每日簽到，學員需全程參與以獲得保證金全額退還。
+                        </p> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="TAICHI_href"></div>
+        <section id = "TAICHI">
+            <div class= "box">
+                <div class="box-title T-E">TAICHI X OpenHCI</div>
+                <div class="card_c">
+                    <card-title><t-20>About TAICHI’ 22<t-20></card-title>
+                    <p>
+                        TAICHI 2022（第八屆臺灣人機互動研討會）為臺灣人機互動學會主辦，
+                        並由來自各大專院校、產業界的人機互動領域專家共同籌辦，集結各領域、院校、產業間的跨界合作。
+                        大會於10月15日至10月16日於國立陽明交通大學六家校區客家文化學院舉行。<br><br>
+                        當人工智慧（artificial intelligence，AI）已廣泛應用於人類世界，它所帶來的爭議、福祉與變遷皆備受矚目。
+                        在社會、經濟、健康或環境等眾多領域的應用上，人工智慧如何在克服議題的同時，依然保有道德倫理之底線？
+                        本次大會主題「AI for Equity, Wellbeing & Sustainability」，
+                        旨在探討人工智慧如何貼近真實世界與人性的萬千變化、如何為世界帶來福祉，以及如何實踐永續的未來。
+                    </p>
+                </div>
+                <div class="card_c">
+                    <card-title><t-20>OpenHCI 與 TAICHI 合作<t-20></card-title>
+                    <p>
+                        你想要讓自己的作品在台灣人機互動年度盛會TAICHI被看見嗎？<br>
+                        TAICHI 是台灣人機互動研究領域中最具代表性的研討會，由台灣人機互動學會所舉辦的年度會議，
+                        為國內跨領域人機互動學者與社群，提供一個意見交換以及成果交流的年度盛會。<br><br>
+                        OpenHCI 工作坊結束之後，<blue-text>OpenHCI將推薦各組成果作品至TAICHI年會展示</blue-text>，
+                        除了學員能夠於會議中發表自己的作品、增加曝光度外，也有機會跟眾多國內外HCI、UXD專家交流，
+                        不管是向學界、業界前輩取經，或是互相分享經驗，相信對學員的未來求學或工作都有相當大的幫助。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div id="speaker_href"></div>
+        <section id="speaker">
+            <div class= "box">
+                <div class="box-title T-E">Keynote Speaker</div>
+                <div class="box-title T-C">演講者</div>
+
+                <div id="speaker_area" class="row justify-content-around">
+                    <div class="col-12 col-xl-6 speaker_phone" style="margin: 0;">
+                        <div class="card_d" data-toggle="collapse" data-parent="#accordion" href="#Speaker1" aria-expanded="true" aria-controls="Speaker1">
+                            <div>
+                                <div class="card_Speaker">
+                                    <img class="card_d_img" style="border-radius: 5200px;" src="./image/speaker/梁容輝老師.jpg">
+                                    <div class="card_d_text pl-3">
+                                        <card-title><t-16>梁容輝</t-16> </card-title>
+                                        <div class="pt-3 pb-2">
+                                            <p-s style="line-height: 0.5;">臺灣科技大學設計系</p-s><br>
+                                            <p-s style="line-height: 0.5;">副教授</p-s>
+                                        </div>
+                                        <div class="pt-2">
+                                            <span><t-14>演講主題</t-14></span>
+                                            <p class="pt-2" style="line-height: 1.2;"><t-14>物件召喚的可能世界與纏結美學</t-14></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="Speaker1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                    <p style="font-size: 14px;">
+                                    資訊科技快速發展的今日，設計物將具備更高的智能，以及更高的自主性與能動性。
+                                    上世紀模態邏輯學及文學領域中所發展的可能世界理論，將人類所認知的實在(reality)從現實世界(actual world)拓展到可能世界(possible world)。
+                                    然而，以人類為中心所建構的可能世界，正在面臨新的挑戰：智慧型的物件，如何邀請人類進入非人類中心的可能世界並召喚纏結的經驗。</p>
+                                </div>
+                                <div class="card_d_close">
+                                    <i class="fa-solid fa-chevron-down" style="margin-top: 15px; float: right;" role="button"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-6 speaker_phone" style="margin: 0;">
+                        <div class="card_d">
+                            <div>
+                                <div class="card_Speaker">
+                                    <img class="card_d_img" style="border-radius: 5200px;" src="./image/speaker/logo.jpg">
+                                    <div class="card_d_text pl-3">
+                                        <card-title><t-16>何樵暐</t-16> </card-title>
+                                        <div class="pt-3 pb-2">
+                                            <p-s style="line-height: 0.5;">Digital Medicine Lab</p-s><br>
+                                            <p-s style="line-height: 0.5;">負責人</p-s>
+                                        </div>
+                                        <div class="pt-2">
+                                            <span><t-14>演講主題</t-14></span>
+                                            <p class="pt-2" style="line-height: 1.2;"><t-14>敬請期待<br><br></t-14></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="Speaker2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                    <p style="font-size: 14px;"></p>
+                                </div>
+                                <div class="card_d_close">
+                                    <i class="fa-solid fa-chevron-down" style="margin-top: 15px; float: right;" role="button" data-toggle="collapse" data-parent="#accordion" href="#Speaker2" aria-expanded="true" aria-controls="Speaker2"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-6 speaker_phone" style="margin: 0;">
+                        <div class="card_d card_height" style="align-items: center;">
+                            <div style="margin: auto;">
+                                <card-title><t-16>敬請期待</t-16> </card-title> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-6 speaker_phone" style="margin: 0;">
+                        <div class="card_d card_height" style="align-items: center;">
+                            <div style="margin: auto;">
+                                <card-title><t-16>敬請期待</t-16> </card-title> 
+                            </div>
+                        </div>
+                    </div>
+                </div>         
+            </div>
+        </section>
+
+        <!-- section schedule -->
+        <div id="schedule_href"></div>
+        <section id = "schedule">
+            <div class= "box">
+                <div class="box-title T-E">Sessions</div>
+                <div class="box-title T-C">詳細日程表</div>
+                <div id="schedule_phone">
+                    <div class="schedule_box"></div>
+                </div>
+                <div id="carouselSchedule" class="carousel slide" data-ride="carousel">
+                    <!-- id="carouselSchedule" class="carousel slide" data-ride="carousel" -->
+                        <a class="carousel-control-prev" href="#carouselSchedule" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselSchedule" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+     
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselSchedule" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselSchedule" data-slide-to="1"></li>
+                            <li data-target="#carouselSchedule" data-slide-to="2"></li>
+                            <li data-target="#carouselSchedule" data-slide-to="3"></li>
+                            <li data-target="#carouselSchedule" data-slide-to="4"></li>
+                        </ol>
+                </div>    
+            </div>
+        </section>
+
+        <div id="Apply_href"></div>
+        <!-- section Apply -->
+        <section id = "Apply">
+            <div class= "box">
+                <div class="box-title T-E">Application</div>
+                <div class="box-title T-C">報名方式</div>
+                <div class="card_c">
+                    <div>
+                        <p><blue-text><p-t>【 報名資格 】 </p-t></blue-text></p>
+                        <p>全國各大專院校升大三以上在學生，含學碩博應屆畢業生及碩博新生。</p>
+                    </div>
+                    <div>
+                        <p><blue-text><p-t>【 報名方式 】 </p-t></blue-text></p>
+                        <p>一律填寫線上表單報名。本活動以報名資料填寫內容作為錄取參考依據，報名先後順序不列入計分標準。</p>
+                    </div>
+                    <div>
+                        <p><blue-text><p-t>【 招生時程 】 </p-t></blue-text></p>
+                        <p>
+                            2022 年 7 月 18 日（一）<br>至 2022 年 7 月 25 日（一） 23:59<br><br>
+                            正取名單公佈： 2022 年 8 月 1 日（一） 網路公布與信件通知<br>
+                            遞補備取通知： 2022 年 8 月 3 日（三） 
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class= "box">
+                <div class="box-title T-E">Registration fee</div>
+                <div class="box-title T-C">報名費用</div>
+                <div class="card_c">
+                    <p>
+                        為推廣 HCI 學門，本活動<blue-text>免報名費，僅收取保證金 1000 元、保險費 62 元及其他費用（住宿、餐飲費用）。</blue-text><br>
+                        獲得錄取資格之學員，請於指定時間內繳交各項費用，繳費後方能取得正式資格。
+                        為維持完整學習體驗，工作坊實行<blue-text>每日簽到，學員需全程參與以獲得保證金全額退還。</blue-text>             
+                    </p>
+                </div>
+            </div>
+
+            <div class= "box">
+                <div class="box-title T-E">How To Apply?</div>
+                <div class="box-title T-C">如何報名？</div>
+                <div class="card_c">
+                    <card-title><t-20>Form Introdutcion</t-20><br>
+                                <t-16>報名表單說明</t-16></card-title>
+                    <p>包含「基本資料」和「IDcard 製作」兩部份：<br><br>
+                        <blue-text>「基本資料」</blue-text><br>包含個人基本資料、相關經歷等內容。<br>
+                        <blue-text>「IDcard 製作」</blue-text><br>
+                        包含「個人簡歷」、「參與工作坊動機」、「作品集」、「回答問題」，請將檔案附在表單的最後，也請注意檔案連結權限。
+                    </p>
+                </div>
+                <div class="card_c">
+                    <card-title><t-20>IDcard specification</t-20><br>
+                        <t-16>IDcard 格式規範</t-16></card-title>
+                        <ls>
+                            <li>IDcard 檔案請依製作內容說明自行製作與編排，並輸出一份<blue-text>三頁之A4橫式PDF檔。</blue-text><br><br></li>
+                            <li>IDcard 檔名格式：<blue-text>IDcard_姓名</blue-text>（範例：IDcard_黃小華）<br><br></li>
+                            <li>若檔案格式或檔名格式不符，造成漏檔，或是忘記開放雲端連結權限，報名者請自行負責。<br><br></li>
+                        </ls>
+                </div>
+            </div>
+
+            <div class= "box">
+                <div class="box-title T-E">About IDcard</div>
+                <div class="box-title T-C">IDcard製作內容說明</div>
+                <div class="card_c">
+                    <card-title><t-20>第一頁｜個人簡歷</t-20></card-title>
+                    <p>請放個人簡歷、說明報名動機，表達格式不限。</p>
+                </div>
+                <div class="card_c">
+                    <card-title><t-20>第二頁｜作品集</t-20></card-title>
+                    <p>請放上一個最滿意的作品（研究、專題、設計皆可），可以明確表達作品的脈絡：作品目標、想要傳達的意象、流程、解決什麼問題、如何解決問題等。</p>
+                </div>
+                <div class="card_c">
+                    <card-title><t-20>第三頁｜問題回答</t-20></card-title>
+                    <p>請從你的經驗中去發想並回答以下問題，共分為團隊題與分析題兩部分，可透過文字、圖片等形式表達。</p>
+                </div>
+
+                <div class="card_a" data-toggle="collapse" data-parent="#accordion" href="#collapse_IDCard_Q1" aria-expanded="true" aria-controls="collapse_IDCard_Q1">
+                    <div class="card_a_close">
+                        <card-title id="card_a_title"><t-20>IDcard 問題一<t-20></card-title>
+                        <i class="fa-solid fa-chevron-down" role="button"></i>
+                    </div>
+                    <div id="collapse_IDCard_Q1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <p><p-t><blue-text>【 專案經驗題 】</blue-text></p-t></p>
+                        <p>
+                            請簡單分享一個你過去印象深刻的專案經驗。（說明在團體中扮演的角色、遇到怎麼樣的困難及如何解決。）
+                        </p>
+                    </div>
+                </div>
+                <div class="card_a ID_Card_Q2" data-toggle="collapse" data-parent="#accordion" href="#collapse_IDCard_Q2" aria-expanded="true" aria-controls="collapse_IDCard_Q2">
+                    <div class="card_a_close">
+                        <card-title id="card_a_title"><t-20>IDcard 問題二<t-20></card-title>
+                        <i class="fa-solid fa-chevron-down" role="button"></i>
+                    </div>
+                    <div id="collapse_IDCard_Q2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <p><p-t><blue-text>【 主題想法題 】</blue-text></p-t></p>
+                        <p>
+                            OpenHCI 2022 的主題為 CyberOasis（賽博綠洲），意在描繪人類、科技物與環境三方共融的未來藍圖。
+                            而近幾年國際與各方企業也十分熱衷討論的聯合國 SDGs，也同樣期望能達到環境永續、身心健全、社會公平等面向。<br>
+                            請參考今年的主題論述與聯合國提出的SDGs，分享一項你認為具有參考性的案例，內容須包含：<br><br>
+                            a.　這個案例具體在解決什麼樣的問題？<br>
+                            b.　「科技」在這個案例扮演什麼樣的角色？<br>
+                            c.　「人」在這個案例扮演什麼樣的角色？<br>
+                            d.　科技和人在這個案例有什麼樣的互動？
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class= "box">
+                <div class="box-title T-T-C">錄取名單資訊</div>
+                <div class="card_c">
+                    <card-title><t-20>公告時間</t-20></card-title>
+                    <div class="container p-0">
+                        <div class="row m-0">
+                            <img class="col-3 col-md-2 p-1 p-md-2 mb-5" src="image/0801.svg">
+                            <div class="col-8 col-md-3 mb-5 pt-2">
+                                <blue-text>公告錄取名單</blue-text><br>正取學員繳費<br>確認報名與匯款資料後即完成報名。
+                            </div>
+                            <i class="col-1 p-0 mb-5 align-self-center fas fa-caret-right"></i>
+
+                            <img class="col-3 col-md-2 p-1 p-md-2 mb-5" src="image/0803.svg">
+                            <div class="col-8 col-md-3 mb-5 pt-2">
+                                <blue-text>遞補備取通知</blue-text><br>備取學員繳費<br>確認報名與匯款資料後即完成報名。
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        未在指定報名期限內完成報名程序者，視為放棄報名資格，會依據備取順序遞補。<br>
+                        關於報名有任何問題，歡迎聯絡主辦單位人事組：human@openhci.com
+                    </p>
+
+                    <card-title><t-20>正備取名單</t-20></card-title>
+                    <p>
+                        有關正備取名單的最新資訊請參照Open HCI 臉書社群。<br>
+                        <blue-text>（主辦單位保留最終更動之權利）</blue-text>
+                    </p>
+
+                    <div class="card_f">
+                        <button type="button" class="cta_btn" onclick="window.open('https://www.facebook.com/openhci')">最新消息</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="FAQ_href"></div>
+        <!-- section FAQ -->
+        <section id = "FAQ">
+            <div class= "box">
+                <div class="box-title T-E">FAQ</div>
+                <!--報名資訊-->
+                <div class="card_a" data-toggle="collapse" data-parent="#accordion" href="#collapse_報名資訊" aria-expanded="true" aria-controls="collapse_報名資訊">
+                    <div class="card_a_show">
+                        <card-title><t-20>報名資訊</t-20></card-title>
+                        <p><br>
+                            Q1 : 應屆畢業生可以參加嗎？<br>
+                            <blue-text>
+                                A1 : 當然可以！只要是全國各大專院校後升大三以上的在學生，含學碩博應屆畢業生都可以參加。
+                            </blue-text>
+                        </p>
+                    </div>
+
+                    <div id="collapse_報名資訊" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <p>
+                            Q2 : 活動期間某些時段無法參加，可以請假嗎？<br>
+                            <blue-text>
+                                A2 : 可以在報名表單中填寫請假時段，但建議全程參與前置與正式工作坊，出席狀況會是我們審核的標準之一。
+                            </blue-text>
+                        </p><br>
+                        
+                        <p>
+                            Q3 : 工作坊的時間怎麼安排？<br>
+                            <blue-text>
+                                A3 : 活動時間分為兩個階段，包含2天的前置工作坊，和3天的正式工作坊。<br>
+                                全日活動時間約為 8:30～20:00 （視各組討論時間）。
+                            </blue-text>
+                        </p><br>
+
+                        <p>
+                            Q4 :疫情會影響活動的舉行嗎？<br>
+                            <blue-text>
+                                A4 :目前為正常舉辦，<br>
+                                不過我們會根據北北基案例個數及臺北市政府對群聚活動的限制，決定是否線上舉辦或停辦。
+                            </blue-text>
+                        </p>
+                    </div>
+                    <div class="card_a_close">
+                        <i class="fa-solid fa-chevron-down" role="button" ></i>
+                        <p role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_報名資訊" aria-expanded="true" aria-controls="collapse_IDCard" style="cursor: pointer;">查看更多...</p>
+                    </div>
+                </div>
+                <!--ID CARD-->
+                <div class="card_a" data-toggle="collapse" data-parent="#accordion" href="#collapse_IDCard" aria-expanded="true" aria-controls="collapse_IDCard">
+                    <div class="card_a_show">
+                        <card-title><t-20>IDcard</t-20></card-title>
+                        <p><br>
+                            Q1 : 什麼是IDcard呢？要怎麼寫？<br>
+                        <blue-text>
+                            A1 : IDcard 是籌備團隊認識你的方式，讓籌備團隊更暸解你的特質、專長以及過去的經歷，以及對此活動及一些議題的看法。別擔心！盡情展現自己就對了！
+                        </blue-text>
+                        </p>
+                    </div>
+                    <div id="collapse_IDCard" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <p>
+                            Q2 : IDcard 的一頁作品集可以放什麼？<br>
+                            <blue-text>
+                                A2 : 無論你來自什麼背景，<br>
+                                請選擇「一」個你最滿意、最喜歡且足以代表你專業能力的作品來進行介紹，
+                                而這個作品可以是研究、專題或設計。
+                            </blue-text>
+                        </p><br>
+                        <p>
+                            Q3 : 對IDcard第三頁中要回答的內容還是沒什麼想法怎麼辦？<br>
+                            <blue-text>
+                                A3 : 可以多留意生活周遭的事物與經驗來發想，還有敬請期待歷屆學員分享的內容！
+                            </blue-text>
+                        </p><br>
+                        <p>
+                            Q4 : IDcard內作品的相關隱私規範？<br>
+                            <blue-text>
+                                A4 : 上傳作品集僅供主辦團隊內部審核。
+                            </blue-text>
+                        </p>
+                    </div>
+                    <div class="card_a_close">
+                        <i class="fa-solid fa-chevron-down" role="button" ></i>
+                        <p role="button"  data-toggle="collapse" data-parent="#accordion" href="#collapse_IDCard" aria-expanded="true" aria-controls="collapse_IDCard" style="cursor: pointer;">查看更多</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- section Previous -->
+        <section id = "Previous">
+            <div class= "box">
+                <div class="box-title T-E">Previous Works</div>
+                <div class="box-title T-C">歷屆作品</div>
+                <div class="row  justify-content-around">
+                    <div class="col-12 col-md-6" style="margin: 0;">
+                        <div class="card_a" data-toggle="collapse" data-parent="#accordion" href="#work-1" aria-expanded="true" aria-controls="work-1">
+                            <div class="card_a_show">
+                                <a href="https://youtu.be/pCtAFKTj8-A" target="_blank">
+                                    <img class="card_g_img" src="image/work1.png" data-toggle="tooltip" data-placement="right" title="點擊圖片進入youtube"></a>
+                                <card-title><t-20>時光雞</t-20></card-title> <br>
+                                <card-title><t-16>最佳互動獎</t-16></card-title> 
+                            </div>
+                            <div id="work-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <p>
+                                    透過 Eggy時光雞，使用者可以自訂倒數時間，當時間倒數結束，Eggy時光雞會以聲音提醒使用者物品已經長時間未使用，提供其丟棄的判斷依據；
+                                    同時透過垃圾袋自動彈出，來增加使用者將物品丟棄的動力。此外，Eggy時光雞以小雞破蛋的可愛形象與親切提示音，增加互動的趣味性。
+                                </p>
+                            </div>
+                            <div class="card_a_close">
+                                <i class="fa-solid fa-chevron-down" role="button"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6" style="margin: 0;">
+                        <div class="card_a" data-toggle="collapse" data-parent="#accordion" href="#work-2" aria-expanded="true" aria-controls="work-2">
+                            <div class="card_a_show">
+                                <a href="https://youtu.be/Bi4Os9LyU5M" target="_blank">
+                                    <img class="card_g_img" src="image/work2.png" data-toggle="tooltip" data-placement="right" title="點擊圖片進入youtube"></a>
+                                <card-title><t-20>蒲呼呼</t-20></card-title> <br>
+                                <card-title><t-16>最佳故事獎</t-16></card-title> 
+                            </div>
+                            <div id="work-2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <p>
+                                    蒲呼呼是款讓離家子女能夠陪伴遠方家人的居家型互動燈光裝置。<br>
+                                    使用者可利用蒲呼呼錄下平時無法當面說出口的關心話語，透過「吹熄」燈光發送錄音，就像吹送蒲公英的種子，將思念傳遞給遠方的家人。
+                                    當家人在為植物澆水時，就蒙聽到語音訊息，並聯動讓使用者的蒲呼呼再度亮起。即使彼此分隔兩地，連結依舊生生不息。
+                                </p>
+                            </div>
+                            <div class="card_a_close">
+                                <i class="fa-solid fa-chevron-down" role="button"></i>
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+                <div class="row  justify-content-around">
+                    <div class="col-12 col-md-6" style="margin: 0;">
+                        <div class="card_a" data-toggle="collapse" data-parent="#accordion" href="#work-3" aria-expanded="true" aria-controls="work-3">
+                            <div class="card_a_show">
+                                <a href="https://youtu.be/icHVRLLE944" target="_blank">
+                                    <img class="card_g_img" src="image/work3.png" data-toggle="tooltip" data-placement="right" title="點擊圖片進入youtube"></a>
+                                <card-title><t-20>READEE</t-20></card-title> <br>
+                                <card-title><t-16>最佳簡報獎</t-16></card-title> 
+                            </div>
+                            <div id="work-3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <p>
+                                    經典，人們都認同其存在之重要性，卻深埋在彼此都不願碰觸的地底深處。
+                                    呼應此次「莫比烏斯」舊物再造之精神,我們團隊將「出土」經典，向大眾推廣並協助他們理解經典。
+                                    Readee將讓您體會到，經典便在生活之中，在我們的周遭，理解它不再是遙不可及的夢想！
+                                </p>
+                            </div>
+                            <div class="card_a_close">
+                                <i class="fa-solid fa-chevron-down" role="button" ></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6" style="margin: 0;">
+                        <div class="card_a" data-toggle="collapse" data-parent="#accordion" href="#work-4" aria-expanded="true" aria-controls="work-4">
+                            <div class="card_a_show">
+                                <a href="https://youtu.be/Av9xV6ZbyhY" target="_blank">
+                                    <img class="card_g_img" src="image/work4.png" data-toggle="tooltip" data-placement="right" title="點擊圖片進入youtube"></a>
+                                <card-title><t-20>尋找湖泊</t-20></card-title> <br>
+                                <card-title><t-16>最佳造型獎</t-16></card-title> 
+                            </div>
+                            <div id="work-4" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <p>
+                                    找到心的平靜 感受成長後的自己<br><br>
+                                    我們如何幫助陷入失戀低潮者梳理混沌思緒、走出低潮迴圈？<br><br>
+                                    「尋找湖泊」是一趟有終點的旅行。提供失戀者在旅途中透過語音心情記錄、沙遊世界建構、寄送與簽收他人沙遊風景明信片、
+                                    與角色問答及反思等過程中進行自我覺察、釐清低潮時的混沌思緒,並勇於主動走到戶外體驗新環境跳脫迴圈場景。
+                                    希望所有失戀者在旅程盡頭之處抵達象徵內心的湖泊時,能找到屬於自己的平靜、感受成長後的自己。
+                                </p>
+                            </div>
+                            <div class="card_a_close">
+                                <i class="fa-solid fa-chevron-down" role="button"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row  justify-content-around">
+                    <div class="col-12 col-md-6" style="margin: 0;">
+                        <div class="card_a" data-toggle="collapse" data-parent="#accordion" href="#work-5" aria-expanded="true" aria-controls="work-5">
+                            <div class="card_a_show">
+                                <a href="https://youtu.be/-8GBYjpyL1c" target="_blank">
+                                    <img class="card_g_img" src="image/work5.png" data-toggle="tooltip" data-placement="right" title="點擊圖片進入youtube"></a>
+                                <card-title><t-20>memoscape.</t-20></card-title> <br>
+                                <card-title><t-16>最佳切題獎</t-16></card-title> 
+                            </div>
+                            <div id="work-5" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <p>
+                                    「將日常回憶編織成一幅最美的風景。」<br><br>
+                                    回憶,是日常的點滴，是經驗的積累，承載了人與人之間的羈絆，見證了痛苦、歡笑與成長。回憶，
+                                    是舊的情感再度被喚起，是過去的種種再度陪伴身旁，時時提醒我們初衷，成為我們的精神支柱。
+                                    但回憶不易保存，想要憶起過往也時常遇到重重阻礙，失去記憶讓我們忽視，生活的時時刻刻都十足珍貴。
+                                    因此，我們設計了「memoscape」,融合了底片機與場記板，暗喻剪接珍貴的日常生活；
+                                    同時結合記憶與日曆，將生活日常回憶化，打造出一張張刻錄生活、獨一無二的日曆卡。
+                                    日曆卡拼接成畫，隨著日子的流逝，創造出僅屬於自己，一幅最美的風景。 讓使用者在不斷前進時，也可以感受到過往的溫度。<br><br>
+                                    日子層層疊疊，過去的記憶形塑我們如今的樣貌，銘記每一天的重要的時刻，就是珍視一路走來的自己。
+                                </p>
+                            </div>
+                            <div class="card_a_close">
+                                <i class="fa-solid fa-chevron-down" role="button"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6" style="margin: 0;">
+                        <div class="card_a" data-toggle="collapse" data-parent="#accordion" href="#work-6" aria-expanded="true" aria-controls="work-6">
+                            <div class="card_a_show">
+                                <a href="https://youtu.be/WEA_fWzaCG0" target="_blank">
+                                    <img class="card_g_img" src="image/work6.png" data-toggle="tooltip" data-placement="right" title="點擊圖片進入youtube"></a>
+                                <card-title><t-20>Walking Workie</t-20></card-title> <br>
+                                <card-title><t-16>最佳技術獎</t-16></card-title> 
+                            </div>
+                            <div id="work-6" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <p>
+                                    疫情時代，遠距工作成為主流之一，改變實體辦公室中既有的互動關係，人與人之間的溝通習慣也被迫重新建立。
+                                    以此為出發點，我們設計出「Walking Workie」，一個桌上型互動裝置，讓你化身為虛擬小人，在上班時間於裝置中漫步，
+                                    並在其中關心同事的工作狀態，重建辦公室陪伴感，並讓團隊增進對彼此的理解與信任。
+                                </p>
+                            </div>
+                            <div class="card_a_close">
+                                <i class="fa-solid fa-chevron-down" role="button"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row  justify-content-around">
+                    <div class="col-12 col-md-6" style="margin: 0;">
+                        <div class="card_a" data-toggle="collapse" data-parent="#accordion" href="#work-7" aria-expanded="true" aria-controls="work-7">
+                            <div class="card_a_show">
+                                <a href="https://youtu.be/ZOiKG2sW1_0" target="_blank">
+                                    <img class="card_g_img" src="image/work7.png" data-toggle="tooltip" data-placement="right" title="點擊圖片進入youtube"></a>
+                                <card-title><t-20>氛享</t-20></card-title> <br>
+                                <card-title><t-16>最佳人氣獎</t-16></card-title> 
+                            </div>
+                            <div id="work-7" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <p>
+                                    用氣氛連結人與人之間最真誠的感受，創造溫暖的互動氛圍，進而讓年輕人獲得認同感。<br>
+                                    #安心分享 #香氣回饋 #嗅覺體驗
+                                </p>
+                            </div>
+                            <div class="card_a_close">
+                                <i class="fa-solid fa-chevron-down" role="button"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6" style="margin: 0;">
+                        <div class="card_a" data-toggle="collapse" data-parent="#accordion" href="#work-8" aria-expanded="true" aria-controls="work-8">
+                            <div class="card_a_show">
+                                <a href="https://youtu.be/YgKbFm13u4E" target="_blank">
+                                    <img class="card_g_img" src="image/work8.png" data-toggle="tooltip" data-placement="right" title="點擊圖片進入youtube"></a>
+                                <card-title><t-20>憶起亂掰</t-20></card-title> <br>
+                                <card-title><t-16>最佳Demo獎</t-16></card-title> 
+                            </div>
+                            <div id="work-8" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <p>
+                                    現代的生活忙碌，人們已經習慣於科技幫助我們保存生活中的回憶，然而科技呈現回憶的方式無法激起人們的情緒感受，
+                                    我們好奇，有沒有一種可以激起人們情緒感受的回憶方式？
+                                </p>
+                            </div>
+                            <div class="card_a_close">
+                                <i class="fa-solid fa-chevron-down" role="button" ></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="Group_href"></div>
+        <!-- section Group -->
+        <section id = "Group">
+            <div class= "box">
+                <div class="box-title T-E">Group</div>
+                <div class="box-title T-C">團隊</div>
+            </div>
+        </section>
+        
+
+        <!-- section organizer -->
+        <section id = "organizer">
+            <div class="card_e">
+                <div>
+                    <div class= "box" >
+                        <div class="box-title T-E">Organizers</div>
+                        <div class="box-title T-C">籌辦單位</div>
+                        <div class="row justify-content-around">
+                            <div class="col-8 col-md-3 row justify-content-center" style="margin: 10% 0; align-items: center;">
+                                <logo><img class="img-fluid" style="width: 100%;" src="./image/主辦單位/ntust.png" ></logo>
+                            </div>
+                            
+                            <logo class="col-8 col-md-3 row justify-content-center" style="margin:5% 0;" >
+                                <img src="image/DCAT.svg">
+                            </logo>
+                            
+                            <div class="col-9 col-md-3 row justify-content-center" style="margin: 10% 0; align-items: center;">
+                                <logo><img class="img-fluid" style="width: 100%;" src="./image/主辦單位/dct.png" ></logo>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class= "box">
+                        <div class="box-title T-E">Co-organizers</div>
+                        <div class="box-title T-C">協辦單位</div>
+                        <div class="row justify-content-around">
+                            <div class="col-9 col-md-5 row justify-content-center" style="margin: 10% 0; align-items: center;">
+                                <logo><img class="img-fluid" style="width: 100%;" src="./image/sponsor logo/FB_ITSA_bar.png" ></logo>
+                            </div>
+                            <div class="col-9 col-md-5 row justify-content-center" style="margin: 10% 0; align-items: center;">
+                                <logo><img class="img-fluid" style="width: 100%;"  src="./image/sponsor logo/TAICHI_Logo(橫).png" ></logo>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id = "Sponsors">
+            <div class="card_e">
+                <div class= "box">
+                    <div class="box-title T-E">Sponsors</div>
+                    <div class="box-title T-C">贊助單位</div>
+                    <div class="row justify-content-around">
+                        <div class="col-7 col-md-4 row justify-content-center" style="margin: 10% 0; align-items: center;">
+                            <logo><img class="img-fluid" style="width: 100%;" src="./image/sponsor logo/AJA.png" ></logo>
+                        </div>
+                        <!-- <div class="col-11 col-md-5 row justify-content-center" style="margin: 10% 0;">
+                            <img class="img-fluid" src="./image/sponsor logo/機器人王國.png" >
+                        </div> -->
+                        <div class="col-7 col-md-4 row justify-content-center" style="margin: 10% 0; align-items: center;">
+                            <logo><img class="img-fluid" style="width: 100%;" src="./image/sponsor logo/CAVEDU.png" ></logo>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section contant -->
+        <section id = "contant">
+            <div class="card_e">
+                <div class= "box contant">
+                    <img src="image/logo.png" class="logo">
+                    <p style="text-align: center;">
+                        OPEN HCI<br>
+                        <a href="https://www.2021.openhci.com/" target="_blank" class="link-light">2021</a> | 
+                        <a href="https://www.2019.openhci.com/" target="_blank" class="link-light">2019</a> | 
+                        <a href="https://www.2018.openhci.com/" target="_blank" class="link-light">2018</a> | 
+                        <a href="https://www.2017.openhci.com/" target="_blank" class="link-light">2017</a> |<br> 
+                        <a href="https://www.2016.openhci.com/" target="_blank" class="link-light">2016</a> | 
+                        <a href="https://www.2015.openhci.com/" target="_blank" class="link-light">2015</a> | 
+                        <a href="https://www.2014.openhci.com/" target="_blank" class="link-light">2014</a> | 
+                        <a href="https://www.2013.openhci.com/" target="_blank" class="link-light">2013</a> |<br>
+                        <a href="https://www.2012.openhci.com/" target="_blank" class="link-light">2012</a> | 
+                        <a href="https://www.2011.openhci.com/" target="_blank" class="link-light">2011</a> | 
+                        <a href="https://www.2009.openhci.com/" target="_blank" class="link-light">2009</a>
+                        <br><br>
+                        @COPYRIGHT 2022 OPEN HCI
+                    </p>
+                    <div style="margin-top: 20px; text-align: center;">
+                        <a href="#" style="margin: 10px;"><i class="fa-brands fa-youtube fa-2xl"></i></a>
+                        <a href="#" style="margin: 10px;"><i class="fa-brands fa-facebook-f fa-2xl"></i></a>
+                    </div>
+                    <br>
+                    <a href="mailto: program@openhci.com" class="link-light">program@openhci.com</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- navbar for computer-->
+        <nav class="side-nav" id="com-navbar" style="display: none;">
+            <ul style="list-style:none">
+                <li class="slide-nav-items">
+                    <a class="nav-link active" id="menu0" href="#theme">
+                        <span class="slide-text">工作坊介紹</span>
+                        <img class="side-nav-icon" src="image/tree.png">
+                    </a>
+                </li>
+                <li class="slide-nav-items">
+                    <a class="nav-link"  id="menu1"  href="#speaker">
+                        <span class="slide-text">講者陣容</span>
+                        <img class="side-nav-icon" src="image/tree.png">
+                    </a>
+                </li>
+                <li class="slide-nav-items">
+                    <a class="nav-link"  id="menu2"  href="#schedule">
+                        <span class="slide-text">詳細日程表</span>
+                        <img class="side-nav-icon" src="image/tree.png">
+                    </a>
+                </li>
+                <li class="slide-nav-items">
+                    <a class="nav-link"  id="menu3"  href="#Apply">
+                        <span class="slide-text">報名步驟</span>
+                        <img class="side-nav-icon" src="image/tree.png">
+                    </a>
+                </li>
+                <li class="slide-nav-items">
+                    <a class="nav-link"  id="menu4"  href="#FAQ">
+                        <span class="slide-text">FAQ</span>
+                        <img class="side-nav-icon" src="image/tree.png">
+                    </a>
+                </li>
+                <li class="slide-nav-items">
+                    <a class="nav-link"  id="menu5"  href="#Previous">
+                        <span class="slide-text">歷屆作品</span>
+                        <img class="side-nav-icon" src="image/tree.png">
+                    </a>
+                </li>
+                <li class="slide-nav-items">
+                    <a class="nav-link"  id="menu6"  href="#Group">
+                        <span class="slide-text">籌辦團隊</span>
+                        <img class="side-nav-icon" src="image/tree.png">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </article>    
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!-- GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+        <!-- three.js -->
+        <script async src="https://unpkg.com/es-module-shims@1.5.9/dist/es-module-shims.js"></script>
+        <script type="importmap">
+            {
+                "imports": {
+                "three": "https://unpkg.com/three@0.142.0/build/three.module.js"
+                }
+            }
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+        <script type="module" src="js/tower.js"></script>
+        <script type="module" src="js/main.js"></script>
+    </body>    
+    
+</html>
