@@ -13,7 +13,11 @@ function canvas_detect() {
     useragent = useragent.toLowerCase();
     
     let content;
-    if(/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)){ //ios
+    if( useragent.indexOf('iphone') != -1 ){
+        isIOS = true;
+        alert("is IOS");
+    }
+    else if( useragent.indexOf('ipad') != -1 || useragent.indexOf('ipod') != -1){
         isIOS = true;
         alert("is IOS");
     }
