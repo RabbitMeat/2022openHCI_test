@@ -1,10 +1,5 @@
 import { main } from "./tower.js"
 
-// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-let vh = window.innerHeight * 0.01;
-// Then we set the value in the --vh custom property to the root of the document
-document.documentElement.style.setProperty('--vh', `${vh}px`);
-
 function iOStest() {
     let useragent = navigator.userAgent;
     if( [
@@ -19,42 +14,10 @@ function iOStest() {
       }
 }
 iOStest();
-/*
-let isIOS = false;
-function canvas_detect() {
-    let URL = document.location.toString();
-    const backgroundSection = document.querySelector(".back-tower");
-    let background = ``;
-    let useragent = navigator.userAgent;
-    useragent = useragent.toLowerCase();
-    
-    let content;
-    if( useragent.indexOf('iphone') != -1 ){
-        isIOS = true;
-        alert("is IOS");
-    }
-    else if( useragent.indexOf('ipad') != -1 || useragent.indexOf('ipod') != -1){
-        isIOS = true;
-        alert("is IOS");
-    }
-    else{
-        let content = `<canvas id="tower-canvas" width="100%" style="position: fixed;"></canvas>`;
-        background += content;
-        alert("not IOS");
-    }
-    content = `<div class="background-image" max-width="100%" style="position: fixed;"></div>`;
-    background += content;
-    console.log("canvas test");
 
-    backgroundSection.insertAdjacentHTML("beforeend", background);
-}
-canvas_detect();
-*/
 $(function() {
-    let windowHeight = window.innerHeight;
-    let windowWidth = window.innerWidth;
-    //console.log('window h = ' + windowHeight);
-
+// model position control
+    let windowSize = window.matchMedia("(min-width: 768px)")
     let mainTower;
     function modelControl(size) {
         if (size.matches) { // If media query matches
@@ -65,20 +28,7 @@ $(function() {
         mainTower;
     }
     modelControl(windowSize) // Call listener function at run time
-    windowSize.addListener(modelControl);  
-    
-    /* test if ios;
-    if(!isIOS ){ // not ios
-        // model position control
-        let mainTower; 
-        if(!isIOS){
-            if(windowWidth >= 768) mainTower = main(750, -20, true);
-            else mainTower = main(485, 0, false);
-            mainTower;
-        }
-    }
-    */
-      
+    windowSize.addListener(modelControl);    
 //btn open
     $(".panel-collapse").on('show.bs.collapse', function() {
         $(this).siblings('.card_a_close').addClass('active');
@@ -91,34 +41,13 @@ $(function() {
     //    console.log("hide");
     })
 
-    // refresh when resize
-    let $window = $(window);
-    let width = $window.width();
-    let height = $window.height();
-
-    /*
-    setInterval(function () {
-        if ((width != $window.width())) {
-            width = $window.width();
-            height = $window.height();
-            location.reload();
-            //console.log("resized!");
-        }
-    }, 300);
-    */
-    /*when load reset tower
-    window.onbeforeunload = () => {  
-        window.scrollTo(0, 0);
-    };
-    */
-
 
 // page change
     $('.nav-link').on('click',function(){
         let POV = $($(this).attr('href'));
         //console.log(POV);
         //console.log(POV.offset().top);
-        $('html,body').animate({scrollTop: (POV.offset().top - windowHeight*0.1), scrollLeft: 0},800);
+        $('html,body').animate({scrollTop: POV.offset().top, scrollLeft: 0},800);
     })
     let a = document.querySelector(".navbar-toggler");
     $(".navbar-nav li a").on("click",function () {
@@ -135,6 +64,10 @@ $(function() {
     //    console.log(i+'ap=' +ah);
     }
 
+    let windowHeight = window.innerHeight;
+    let windowWidth = window.innerWidth;
+    //console.log('window h = ' + windowHeight);
+
     $(document).scroll(function() {
         $('html,body').scrollLeft(0);
         //mainTower.rotate_scroll();
@@ -149,48 +82,58 @@ $(function() {
 
         for (var i = 14; i <= 15; i++) {
             if(scrollPos >= ah[i-1] - windowHeight/1.5){
-                //console.log('show');
+                console.log('show');
                 $('section:nth-of-type('+i+') logo').addClass('fade_in_logo');
             }
         }
+    })
 
-        // hide and show navbar
+    
+
+    // hide and show navbar
+    $(window).scroll(function () {
         let sc = $(window).scrollTop();
         let card_start = $("#theme").offset().top - window.innerHeight/4;
         //console.log('max height: ' + card_start);
-        if(windowWidth > 768){
+        if (windowWidth > 768) {
             if(sc > card_start){
-                $("#top_navbar_computer").fadeIn(200);
+                $("#top_navbar").fadeIn(200);
                 $("#com-navbar").fadeIn(800);
             }
-            else{
-                $("#com-navbar").fadeOut(200);
-                $("#top_navbar_computer").fadeOut(800);
+            else {
+                $("#com-navbar").fadeOut();
+                $("#top_navbar").fadeOut(800);
             }
         }
-        else{
-            if(sc > card_start){
-                $("#top_navbar_phone").fadeIn(200);
-                $('.menu-control').fadeOut();
-            }
-            else{
-                $('.menu-control').fadeIn();
-                $("#top_navbar_computer").fadeOut(200);
-                $("#top_navbar_phone").fadeOut(200);
-            }
-        }
-        
         // phone main page background
         // only work when head
         if(sc < windowHeight*1.5){
-            let targetOpacity = 0.7;
+            let targetOpacity = 0.8;
             targetOpacity = (1 - sc/(windowHeight*0.8))*targetOpacity;
             $('.main_phone').css({
                 'background-color': 'rgba(0, 0, 0, '+ targetOpacity +')',
                 'box-shadow': 'inset 0px -30px 15px -10px rgba(34,34,34, ' + targetOpacity +')'
             });
         }
-    })
+    });
+
+    // refresh when resize
+    let $window = $(window);
+    let width = $window.width();
+    let height = $window.height();
+
+    setInterval(function () {
+        if ((width != $window.width()) || (height != $window.height())) {
+            width = $window.width();
+            height = $window.height();
+            location.reload();
+            //console.log("resized!");
+        }
+    }, 300);
+    //when load reset tower
+    window.onbeforeunload = () => {  
+        window.scrollTo(0, 0);  
+    };
 });
 
 //導航列位置指示
@@ -209,9 +152,7 @@ for(let i=0; i<sections.length-1; i++) {
 }
 
 function setNavBar(){
-    $('.menu-control').css('display', 'none');
-    $('#top_navbar_computer').css('display', 'none');
-    $('#top_navbar_phone').css('display', 'none');
+    $("#com-navbar").css('display', 'none');
 }
 
 setNavBar();
@@ -247,7 +188,7 @@ const scheduleInfo = {
             "08:00 ~ 09:00": "學員報到",
             "09:00 ~ 10:00": "工具課程： SparkAR",
             "10:00 ~ 11:00": "設計思考工作坊：<br>發想、原型製作、測試",
-            "11:00 ~ 12:00": "工具課程： Arduino",
+            "11:00 ~ 12:00": "工具課程",
             "12:00 ~ 13:00": "午餐",
             "13:00 ~ 15:00": "學員討論",
             "15:00 ~ 17:00": "小發表"
@@ -319,7 +260,7 @@ const groupInfo = {
     {
         "name": "盧姿惠",
         "school": "國立政治大學",
-        "department": "公共行政學系 / 數位內容學程"
+        "department": "公共行政學系 / 數位內容"
     }],
     "PHOTOGRAPHY": [{
         "name": "左雅致",
@@ -418,7 +359,7 @@ const groupInfo = {
     },
     {
         "name": "吳泓玉",
-        "school": "台南應用科技大學",
+        "school": "台南應用科大",
         "department": "服飾設計管理系"
     },
     {
@@ -544,10 +485,10 @@ function group_information_insertion() {
     const groupSection = document.querySelector("#Group .box");
     let member = ``;
     for (const [key, value] of Object.entries(groupInfo)) {
-        let content = `<div class="card_a" data-toggle="collapse" data-parent="#accordion" href="#collapse_${key}" aria-expanded="true" aria-controls="collapse_${key}">
+        let content = `<div class="card_a">
                     <div class="card_a_close">
                         <card-title id="card_a_title"><t-20>${key}<t-20></card-title>
-                        <i class="fa-solid fa-chevron-down" role="button" ></i>
+                        <i class="fa-solid fa-chevron-down" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_${key}" aria-expanded="true" aria-controls="collapse_${key}"></i>
                     </div>
                     <div id="collapse_${key}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" style="width: 100%;">
                         <div class="row group_member">`;
@@ -653,8 +594,8 @@ function speaker_information_insertion(type) {
     }
 }
 
-// speaker_information_insertion("phone");
-// speaker_information_insertion("desktop");
+speaker_information_insertion("phone");
+speaker_information_insertion("desktop");
 
 const previousWork = [{
     "name": "Eggy",
@@ -689,12 +630,3 @@ const previousWork = [{
     "description": "現代的生活忙碌，人們已經習慣於科技幫助我們保存生活中的回憶，然而科技呈現回憶的方式無法激起人們的情緒感受，我們好奇，有沒有一種可以激起人們情緒感受的回憶方式？",
     "url": "https://www.youtube.com/watch?v=YgKbFm13u4E&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T&index=8"
 }]
-
-
-
-
-
-
-
-
-

@@ -12,6 +12,7 @@ html {
   position: absolute;
   top: 0%;
   left: 0%;
+  scroll-behavior: smooth !important;
 }
 
 body {
