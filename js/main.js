@@ -64,6 +64,8 @@ $(function() {
         }
         mainTower;
     }
+    modelControl(windowSize) // Call listener function at run time
+    windowSize.addListener(modelControl);  
     
     /* test if ios;
     if(!isIOS ){ // not ios
