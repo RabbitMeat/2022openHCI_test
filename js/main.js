@@ -5,19 +5,20 @@ let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-function iOS() {
-    return [
-      'iPad Simulator',
-      'iPhone Simulator',
-      'iPod Simulator',
-      'iPad',
-      'iPhone',
-      'iPod'
-    ].includes(navigator.platform)
-    // iPad on iOS 13 detection
-    || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+function iOStest() {
+    let useragent = navigator.userAgent;
+    if( [
+        'iPad Simulator',
+        'iPhone Simulator',
+        'iPod Simulator',
+        'iPad',
+        'iPhone',
+        'iPod'
+      ].includes(navigator.platform) || (navigator.userAgent.includes("Mac") && "ontouchend" in document) ){
+        alert("ios");
+      }
 }
-alert(ios());
+iOStest();
 /*
 let isIOS = false;
 function canvas_detect() {
