@@ -5,6 +5,8 @@ let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
+
+/*
 let isIOS = false;
 function canvas_detect() {
     let URL = document.location.toString();
@@ -34,14 +36,23 @@ function canvas_detect() {
     backgroundSection.insertAdjacentHTML("beforeend", background);
 }
 canvas_detect();
-
+*/
 $(function() {
     let windowHeight = window.innerHeight;
     let windowWidth = window.innerWidth;
     //console.log('window h = ' + windowHeight);
 
-
-    // test if ios;
+    let mainTower;
+    function modelControl(size) {
+        if (size.matches) { // If media query matches
+            mainTower = main(750, -20, true);
+        } else {
+            mainTower = main(485, 0, false);
+        }
+        mainTower;
+    }
+    
+    /* test if ios;
     if(!isIOS ){ // not ios
         // model position control
         let mainTower; 
@@ -51,6 +62,7 @@ $(function() {
             mainTower;
         }
     }
+    */
       
 //btn open
     $(".panel-collapse").on('show.bs.collapse', function() {

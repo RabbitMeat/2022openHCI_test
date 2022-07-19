@@ -89,7 +89,7 @@
     <!--    <canvas id="tower-canvas" width="100%" style="position: fixed;"></canvas>
         <div class="background-image" width="100%" style="position: fixed;"></div> -->
     </div>
-    <p>test ver.6</p>
+    <p>test ver.7</p>
 
         <div id="home_href"></div>
         <!-- section home-->  
@@ -1107,6 +1107,35 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
         <script type="module" src="js/tower.js"></script>
         <script type="module" src="js/main.js"></script>
+        <script type="text/javascript">
+
+            let isIOS = false;
+            const backgroundSection = document.querySelector(".back-tower");
+            let background = ``;
+            let useragent = navigator.userAgent;
+            useragent = useragent.toLowerCase();
+            
+            let content;
+            if( useragent.indexOf('iphone') != -1 ){
+                isIOS = true;
+                alert("is IOS");
+            }
+            else if( useragent.indexOf('ipad') != -1 || useragent.indexOf('ipod') != -1){
+                isIOS = true;
+                alert("is IOS");
+            }
+            else{
+                let content = `<canvas id="tower-canvas" width="100%" style="position: fixed;"></canvas>`;
+                background += content;
+                alert("not IOS");
+            }
+            content = `<div class="background-image" max-width="100%" style="position: fixed;"></div>`;
+            background += content;
+            console.log("canvas test");
+
+            backgroundSection.insertAdjacentHTML("beforeend", background);
+    
+        </script>
     </body>    
     
 </html>
