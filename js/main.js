@@ -7,6 +7,7 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 let isIOS = false;
 function canvas_detect() {
+    let URL = document.location.toString();
     const backgroundSection = document.querySelector(".back-tower");
     let background = ``;
     let useragent = navigator.userAgent;
