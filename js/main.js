@@ -13,7 +13,6 @@ function detectiOS() {
         let scroll_all = new SmoothScroll('html', {easing: 'linear'});
         const el = document.querySelector('html');
         el.style.scrollBehavior = 'smooth';
-        el.style.easing = 'easeOutQuart';
       }
 }
 detectiOS();
