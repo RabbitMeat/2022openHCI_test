@@ -13,8 +13,8 @@ function detectiOS() {
         //alert("ios");
         let scroll_all = new SmoothScroll('html', {easing: 'linear'});
         //scroll.polyfill();
-        const el = document.querySelector('html');
-        el.style.scrollBehavior = 'smooth';
+        //const el = document.querySelector('html');
+        //el.style.scrollBehavior = 'smooth';
         //$('html').css("scroll-behavior", "smooth !important");
       }
 }
