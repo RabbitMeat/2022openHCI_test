@@ -14,6 +14,7 @@ function detectiOS() {
         //let scroll_all = new SmoothScroll('html', {easing: 'linear'});
         smoothscroll.polyfill;
         const el = document.querySelector('html');
+        //el.style.setProperty('scroll-Behavior', 'smooth', 'important');
         el.style.scrollBehavior = 'smooth';
       }
 }
@@ -69,7 +70,13 @@ $(function() {
         let POV = $($(this).attr('href'));
         //console.log(POV);
         //console.log(POV.offset().top);
+        const el = document.querySelector('html');
+        el.style.scrollBehavior = 'auto';
         $('html,body').animate({scrollTop: (POV.offset().top - windowHeight*0.1)},800);
+        setTimeout(function(){
+            el.style.scrollBehavior = 'smooth';
+        },1000);
+        
     })
     let a = document.querySelector(".navbar-toggler");
     $(".navbar-nav li a").on("click",function () {
