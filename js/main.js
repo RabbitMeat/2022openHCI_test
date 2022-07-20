@@ -11,7 +11,7 @@ function detectiOS() {
       ].includes(navigator.platform) || (navigator.userAgent.includes("Mac") && "ontouchend" in document)){
         //document.documentElement.style.setProperty('scroll-behavior', `smooth !important`);
         //alert("ios");
-        let scroll = new SmoothScroll('html');
+        let scroll_all = new SmoothScroll('html', {easing: 'linear'});
         //scroll.polyfill();
         const el = document.querySelector('html');
         el.style.scrollBehavior = 'smooth';
