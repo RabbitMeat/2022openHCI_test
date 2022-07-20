@@ -1,5 +1,4 @@
 import { main } from "./tower.js"
-import smoothscroll from 'smoothscroll-polyfill'
 
 function detectiOS() {
     if( [

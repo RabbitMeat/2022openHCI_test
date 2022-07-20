@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  background-color: #4d515c;
+  background-color: #47575e;
   display: flex;
   flex-direction: column;
   /* 毛玻璃測試用背景 */
@@ -31,12 +31,12 @@ body {
   margin: 0 auto;
   overflow-x: hidden;
   justify-content: space-around;
-  -webkit-overflow-scrolling: touch;
 }
 
 .background-image {
-  background-image: url("../image/Rectangle.png");
+  background-image: url("../image/Rectangle_edit.png");
   background-position: center bottom;
+  background-size: cover;
   height: 100%;
   min-width: 100%;
   position: fixed;
@@ -1053,7 +1053,7 @@ white-line {
     width: 30vw;
     max-width: 780px;
     min-height: 45vh;
-    max-height: 70vh;
+    //max-height: 70vh;
     margin: auto;
   }
 
@@ -1236,25 +1236,6 @@ white-line {
   rgba(200, 200, 200, 0.5) 50%,rgba(200, 200, 200, 0.5) 100%) ;
   /* backdrop-filter: blur(4px); */
   backdrop-filter: unset;
-  }
-
-  #Speaker_phone {
-    display: none;
-  }
-
-  #carouselSpeaker {
-    display: block;
-  }
-
-  .carousel-inner {
-    padding-bottom: 1vh;
-  }
-
-  #speaker .carousel-inner .carousel-item .card_d {
-    width: 30vw;
-    max-width: 780px;
-    height: 550px;
-    margin: auto;
   }
 
   .card_Speaker {
