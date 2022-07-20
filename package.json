@@ -1,0 +1,23 @@
+{
+  "name": "2022openhci_test",
+  "version": "1.0.0",
+  "description": "This is the OpenHCI workshop official website project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RabbitMeat/2022openHCI_test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RabbitMeat/2022openHCI_test/issues"
+  },
+  "homepage": "https://github.com/RabbitMeat/2022openHCI_test#readme",
+  "dependencies": {
+    "@types/smoothscroll-polyfill": "^0.3.1",
+    "smoothscroll-polyfill": "^0.4.4"
+  }
+}

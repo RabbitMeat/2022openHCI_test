@@ -1,4 +1,5 @@
-import { main } from "./tower.js"
+import { main } from "./tower.js";
+import * as smoothscroll from "smoothscroll-polyfill";
 
 function detectiOS() {
     if( [
@@ -10,7 +11,8 @@ function detectiOS() {
         'iPod'
       ].includes(navigator.platform) || (navigator.userAgent.includes("Mac") && "ontouchend" in document)){
         //alert("ios");
-        let scroll_all = new SmoothScroll('html', {easing: 'linear'});
+        //let scroll_all = new SmoothScroll('html', {easing: 'linear'});
+        smoothscroll.polyfill;
         const el = document.querySelector('html');
         el.style.scrollBehavior = 'smooth';
       }
