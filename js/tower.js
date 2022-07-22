@@ -7,13 +7,18 @@ const camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.inner
 function main(z_coord, y_coord, activateAnimation) {
     const canvas = document.querySelector('#tower-canvas');
     const renderer = new THREE.WebGLRenderer({canvas, antialias: true, alpha: true });
-    renderer.setSize( window.innerWidth, window.innerHeight );
+    renderer.setSize( window.innerWidth, window.innerHeight);
     renderer.setClearColor( 0xffffff, 0 );
     
     const scene = new THREE.Scene();
     //scene.background = new THREE.Color( 0x1e1e1e );
     
+    // Light section
     const ambientLight = new THREE.AmbientLight( 0x404040, 2.3 );
+    const light = new THREE.DirectionalLight(0xffffff, 0.6)
+    light.position.set(2,2,5);
+
+    scene.add(light);
     scene.add( ambientLight );
     // const axesHelper = new THREE.AxesHelper( 1000 );
     // scene.add( axesHelper );
@@ -32,11 +37,6 @@ function main(z_coord, y_coord, activateAnimation) {
     }, function ( error ) {
         console.error( error );
     } );
-    
-    // Light section
-    const light = new THREE.DirectionalLight(0xffffff, 0.4)
-    light.position.set(2,2,5);
-    scene.add(light);
     
     // // Animation section
     function lerp(x, y, a){

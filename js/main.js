@@ -1,6 +1,8 @@
-import { main } from "./tower.js";
-import * as smoothscroll from "smoothscroll-polyfill";
+import { main } from "./tower.js"
+//import * as smoothscroll from './smoothscroll.js';
 
+let IOS = false;
+const setHTML = document.querySelector('html');
 function detectiOS() {
     if( [
         'iPad Simulator',
@@ -11,17 +13,17 @@ function detectiOS() {
         'iPod'
       ].includes(navigator.platform) || (navigator.userAgent.includes("Mac") && "ontouchend" in document)){
         //alert("ios");
-        //let scroll_all = new SmoothScroll('html', {easing: 'linear'});
-        smoothscroll.polyfill;
-        const el = document.querySelector('html');
-        //el.style.setProperty('scroll-Behavior', 'smooth', 'important');
-        el.style.scrollBehavior = 'smooth';
+        //let scroll = new SmoothScroll('html', {easing: 'linear'});
+        //smoothscroll.polyfill;
+        //IOS = true;
+        //setHTML.style.scrollBehavior = 'smooth';
       }
 }
 detectiOS();
 
 $(function() {
 // model position control
+/*
     let windowSize = window.matchMedia("(min-width: 768px)")
     let mainTower;
     function modelControl(size) {
@@ -34,6 +36,7 @@ $(function() {
     }
     modelControl(windowSize) // Call listener function at run time
     windowSize.addListener(modelControl);    
+*/
 //btn open
     $(".panel-collapse").on('show.bs.collapse', function() {
         $(this).siblings('.card_a_close').addClass('active');
@@ -70,13 +73,13 @@ $(function() {
         let POV = $($(this).attr('href'));
         //console.log(POV);
         //console.log(POV.offset().top);
-        const el = document.querySelector('html');
-        el.style.scrollBehavior = 'auto';
-        $('html,body').animate({scrollTop: (POV.offset().top - windowHeight*0.1)},800);
-        setTimeout(function(){
-            el.style.scrollBehavior = 'smooth';
-        },1000);
-        
+        if(IOS){
+            setHTML.style.scrollBehavior = 'auto';
+            setTimeout(function(){
+                setHTML.style.scrollBehavior = 'smooth';
+            },800);
+        }
+        $('html,body').animate({scrollTop: (POV.offset().top - windowHeight*0.1), scrollLeft: 0},800, "linear");
     })
     let a = document.querySelector(".navbar-toggler");
     $(".navbar-nav li a").on("click",function () {
@@ -190,6 +193,8 @@ function getOffset(el) {
       top: rect.top + window.scrollY
     };
 }
+
+
 
 const scheduleInfo = {
     "前置工作坊": [
@@ -553,6 +558,7 @@ function schedule_information_insertion(type) {
                                     <br>
                                     <t-24><blue-text> Day${idx+1} </blue-text></t-24>
                                 </card-title>`;
+                                
             let index = 1;
             for (const [key, value] of Object.entries(schedule)) {
                 content += `<div class="schedule-text">
@@ -563,6 +569,13 @@ function schedule_information_insertion(type) {
                     content += "<white-line></white-line>";
                     index += 1;
                 }
+                
+            }
+            if( (idx == 1 && key == "前置工作坊") || (idx == 2 && key == "正式工作坊") ){
+                content +=  `<button type="button" class="cta_btn" style="max-height: 100%; margin:auto; margin-bottom:5%;" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScXBW5Z-xjLmo55iADtUDajNS3eGo_OYl8kx2GOh-LEo0O-uA/viewform')">我要報名！</button> `;
+            }
+            if( (idx == 1 && key == "正式工作坊") ){
+                content +=  `<button type="button" class="cta_btn nav-link" style="max-height: 100%; margin:auto; margin-bottom:5%;" href="#speaker">講者陣容</button> `;
             }
             content += endDiv;
             workshop += content;
@@ -651,3 +664,12 @@ const previousWork = [{
     "description": "現代的生活忙碌，人們已經習慣於科技幫助我們保存生活中的回憶，然而科技呈現回憶的方式無法激起人們的情緒感受，我們好奇，有沒有一種可以激起人們情緒感受的回憶方式？",
     "url": "https://www.youtube.com/watch?v=YgKbFm13u4E&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T&index=8"
 }]
+
+
+
+
+
+
+
+
+

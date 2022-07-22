@@ -3,16 +3,34 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      
+        <meta name="description" content="OpenHCI'22 是第十二屆由學生自治籌備的人機互動工作坊，旨在推廣人機互動學門與跨領域合作。
+        在五天的工作坊期間，來自不同領域的學員會經歷一系列講座與課後實作演練，深入完整 HCI 設計流程，
+        透過合作溝通以實踐構想，將無盡的創意展現給世界！">
+        <meta property="og:title" content="OpenHCI 2022" />
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.2022.openhci.com/" />
+        <meta property="og:image" content="https://storage.googleapis.com/openhci-2022/OpenHCI_2022_banner.jpeg" />
+        <meta property="og:description" content="OpenHCI'22 是第十二屆由學生自治籌備的人機互動工作坊，旨在推廣人機互動學門與跨領域合作。
+        在五天的工作坊期間，來自不同領域的學員會經歷一系列講座與課後實作演練，深入完整 HCI 設計流程，
+        透過合作溝通以實踐構想，將無盡的創意展現給世界！" />
+        <meta name="google-site-verification" content="uFLBwHJu1Z5x2VwusZJ3bZuFH6Xjoe9vpSyRxNGoi8U" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="./image/OpenHCI22_logo.png">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://kit.fontawesome.com/cbd91073cd.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script>
-        <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
-        <title>跳轉測試用</title>
+        <script src="https://kit.fontawesome.com/cbd91073cd.js" crossorigin="anonymous"></script>
+        <title>OpenHCI 2022 | 人機互動工作坊</title>
         <link href="css/main.css" rel="stylesheet">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0TXLGH3PGV"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-0TXLGH3PGV');
+        </script>
     </head>
 
     <body>
@@ -88,25 +106,23 @@
     </nav>
     
     <div class="back-tower">
-        <canvas id="tower-canvas" width="100%" style="position: fixed;"></canvas>
-        <div class="background-image" max-width="100%" style="position: fixed;"></div>
-    <!--    <canvas id="tower-canvas" width="100%" style="position: fixed;"></canvas>
-        <div class="background-image" width="100%" style="position: fixed;"></div> -->
+<!--       <canvas id="tower-canvas" style="position: fixed;"></canvas> --> 
+        <div class="background-image" width="100%" style="position: fixed;"></div>
     </div>
-    <p>test ver.30</p>
+    <p>test: close tower</p>
 
         <div id="home_href"></div>
         <!-- section home-->  
         <section id = "home">
             <div class="main_phone">
                 <div class="row">
-                    <p>第12屆OpenHCI人機互動工作坊</p>
+                    <p>2022 OpenHCI人機互動工作坊</p>
                     <img src="image/cyberoasis.png" class="col-10" style="height: auto; filter: drop-shadow(0px 0px 24px #6BAC9A);">
                     <img src="image/date.svg" class="col-10" style="margin-top: 10vh; max-width: 80%;">
                 </div>
             </div>
-            <div class = "box main_title row" style="height: 60vh;">
-                <div class="box-title T-C col-md-8 align-self-start">第1 2 屆O p e n H C I 人機互動工作坊</div>
+            <div class = "box main_title row" style="min-height: 60vh;">
+                <div class="box-title T-C col-md-8 align-self-start">2 0 2 2 ｜第1 2 屆 O p e n H C I 人機互動工作坊</div>
                 <img src="image/cyberoasis.png" class="col-11 offset-col-1">
                 <nav class="side-nav col-12">
                     <ul style="list-style:none">
@@ -278,7 +294,7 @@
                     </div>
                 </div>
                 <div id="carouselPrograms" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
+                    <div class="carousel-inner row m-0">
                         <div class="carousel-item active">
                             <div class="card_d">
                                 <card-title>
@@ -314,7 +330,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <div class="card_d">
+                            <div class="card_d set-height">
                                 <card-title>
                                     <t-20>正式工作坊<t-20>
                                 </card-title>
@@ -425,25 +441,23 @@
                 <div class="box-title T-E">Keynote Speaker</div>
                 <div class="box-title T-C">演講者</div>
 
-                <div id="speaker_area" class="row justify-content-around">
+                <div id="speaker_area" class="row justify-content-flex-start m-auto">
                     <div class="col-12 col-xl-6 speaker_phone" style="margin: 0;">
-                        <div class="card_d" data-toggle="collapse" data-parent="#accordion" href="#Speaker1" aria-expanded="true" aria-controls="Speaker1">
+                        <div class="card_d" style="padding:30px 5%; width: auto;" data-toggle="collapse" data-parent="#accordion" href="#Speaker1" aria-expanded="true" aria-controls="Speaker1">
                             <div>
                                 <div class="card_Speaker">
-                                    <img class="card_d_img" style="border-radius: 5200px;" src="./image/speaker/梁容輝老師.jpg">
-                                    <div class="card_d_text pl-3">
-                                        <card-title><t-16>梁容輝</t-16> </card-title>
-                                        <div class="pt-3 pb-2">
+                                    <img class="card_d_img" style="border-radius: 5200px; margin: auto;" src="./image/speaker/梁容輝老師.jpg">
+                                    <div class="card_d_text pl-3 ml-0" style="margin: auto;">
+                                        <card-title><t-16>梁容輝</t-16></card-title><br>
+                                        <div>
                                             <p-s style="line-height: 0.5;">臺灣科技大學設計系</p-s><br>
                                             <p-s style="line-height: 0.5;">副教授</p-s>
                                         </div>
-                                        <div class="pt-2">
-                                            <span><t-14>演講主題</t-14></span>
-                                            <p class="pt-2" style="line-height: 1.2;"><t-14>物件召喚的可能世界與纏結美學</t-14></p>
-                                        </div>
                                     </div>
                                 </div>
-                                <div id="Speaker1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <p class="pt-4" style="line-height: 1.2;display: flex; flex-direction: row;"><blue-text style="margin: auto;">"物件召喚的可能世界與纏結美學"</blue-text></p>
+                                
+                                <div id="Speaker1" style="padding: 0 5%;" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                     <p style="font-size: 14px;">
                                     資訊科技快速發展的今日，設計物將具備更高的智能，以及更高的自主性與能動性。
                                     上世紀模態邏輯學及文學領域中所發展的可能世界理論，將人類所認知的實在(reality)從現實世界(actual world)拓展到可能世界(possible world)。
@@ -456,40 +470,46 @@
                         </div>
                     </div>
                     <div class="col-12 col-xl-6 speaker_phone" style="margin: 0;">
-                        <div class="card_d">
+                        <div class="card_d" style="padding:30px 5%; width: auto;">
                             <div>
                                 <div class="card_Speaker">
-                                    <img class="card_d_img" style="border-radius: 5200px;" src="./image/speaker/logo.jpg">
-                                    <div class="card_d_text pl-3">
-                                        <card-title><t-16>何樵暐</t-16> </card-title>
-                                        <div class="pt-3 pb-2">
+                                    <img class="card_d_img" style="border-radius: 5200px; margin: auto;" src="./image/speaker/logo.jpg">
+                                    <div class="card_d_text pl-3 ml-0" style="margin: auto;">
+                                        <card-title><t-16>何樵暐</t-16> </card-title><br>
+                                        <div>
                                             <p-s style="line-height: 0.5;">Digital Medicine Lab</p-s><br>
                                             <p-s style="line-height: 0.5;">負責人</p-s>
                                         </div>
-                                        <div class="pt-2">
-                                            <span><t-14>演講主題</t-14></span>
-                                            <p class="pt-2" style="line-height: 1.2;"><t-14>敬請期待<br><br></t-14></p>
-                                        </div>
                                     </div>
                                 </div>
+                                <p class="pt-4" style="line-height: 1.2;display: flex; flex-direction: row;"><blue-text style="margin: auto;">敬請期待</blue-text></p>
+
                                 <div id="Speaker2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                     <p style="font-size: 14px;"></p>
                                 </div>
                                 <div class="card_d_close">
-                                    <i class="fa-solid fa-chevron-down" style="margin-top: 15px; float: right;" role="button" data-toggle="collapse" data-parent="#accordion" href="#Speaker2" aria-expanded="true" aria-controls="Speaker2"></i>
+                                    <!-- <i class="fa-solid fa-chevron-down" style="margin-top: 15px; float: right;" role="button" data-toggle="collapse" data-parent="#accordion" href="#Speaker2" aria-expanded="true" aria-controls="Speaker2"></i> -->
+                                    <i class="fa-solid fa-chevron-down" style="margin-top: 15px; float: right; opacity: 0.5;"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-xl-6 speaker_phone" style="margin: 0;">
-                        <div class="card_d card_height" style="align-items: center;">
+                        <div class="card_d card_height" style="align-items: center; width: auto;">
                             <div style="margin: auto;">
                                 <card-title><t-16>敬請期待</t-16> </card-title> 
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-xl-6 speaker_phone" style="margin: 0;">
-                        <div class="card_d card_height" style="align-items: center;">
+                        <div class="card_d card_height" style="align-items: center; width: auto;">
+                            <div style="margin: auto;">
+                                <card-title><t-16>敬請期待</t-16> </card-title> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-6 speaker_phone " style="margin: 0;">
+                        <div class="card_d card_height" style="align-items: center; width: auto;">
                             <div style="margin: auto;">
                                 <card-title><t-16>敬請期待</t-16> </card-title> 
                             </div>
@@ -538,15 +558,15 @@
                 <div class="box-title T-C">報名方式</div>
                 <div class="card_c">
                     <div>
-                        <p><blue-text><p-t>【 報名資格 】 </p-t></blue-text></p>
+                        <card-title><t-20>報名資格</t-20></card-title>
                         <p>全國各大專院校升大三以上在學生，含學碩博應屆畢業生及碩博新生。</p>
                     </div>
                     <div>
-                        <p><blue-text><p-t>【 報名方式 】 </p-t></blue-text></p>
+                        <card-title><t-20>報名方式</t-20></card-title>
                         <p>一律填寫線上表單報名。本活動以報名資料填寫內容作為錄取參考依據，報名先後順序不列入計分標準。</p>
                     </div>
                     <div>
-                        <p><blue-text><p-t>【 招生時程 】 </p-t></blue-text></p>
+                        <card-title><t-20>招生時程</t-20></card-title>
                         <p>
                             2022 年 7 月 18 日（一）<br>至 2022 年 7 月 25 日（一） 23:59<br><br>
                             正取名單公佈： 2022 年 8 月 1 日（一） 網路公布與信件通知<br>
@@ -757,7 +777,7 @@
                     </div>
                     <div class="card_a_close">
                         <i class="fa-solid fa-chevron-down" role="button" ></i>
-                        <p role="button"  data-toggle="collapse" data-parent="#accordion" href="#collapse_IDCard" aria-expanded="true" aria-controls="collapse_IDCard" style="cursor: pointer;">查看更多</p>
+                        <p role="button"  data-toggle="collapse" data-parent="#accordion" href="#collapse_IDCard" aria-expanded="true" aria-controls="collapse_IDCard" style="cursor: pointer;">查看更多...</p>
                     </div>
                 </div>
 
@@ -955,6 +975,7 @@
         
 
         <!-- section organizer -->
+        <div class="organizer_box"></div>
         <section id = "organizer">
             <div class="card_e">
                 <div>
@@ -962,17 +983,17 @@
                         <div class="box-title T-E">Organizers</div>
                         <div class="box-title T-C">籌辦單位</div>
                         <div class="row justify-content-around">
-                            <div class="col-8 col-md-3 row justify-content-center" style="margin: 10% 0; align-items: center;">
+                            <a class="col-8 col-md-3 row justify-content-center" style="margin: 10% 0; align-items: center;" href="https://www.dt.ntust.edu.tw/" target="_blank">
                                 <logo><img class="img-fluid" style="width: 100%;" src="./image/主辦單位/ntust.png" ></logo>
-                            </div>
+                            </a>                            
                             
-                            <logo class="col-8 col-md-3 row justify-content-center" style="margin:5% 0;" >
-                                <img src="image/DCAT.svg">
-                            </logo>
+                            <a class="col-8 col-md-3 row justify-content-center" style="margin:5% 0; align-items: center;" href="https://dcat.nycu.edu.tw/" target="_blank">
+                                <logo><img class="img-fluid" style="width: 100%;" src="image/DCAT.svg"></logo>
+                            </a>                            
                             
-                            <div class="col-9 col-md-3 row justify-content-center" style="margin: 10% 0; align-items: center;">
+                            <a class="col-9 col-md-3 row justify-content-center" style="margin: 10% 0; align-items: center;" href="http://dct.nccu.edu.tw/" target="_blank">
                                 <logo><img class="img-fluid" style="width: 100%;" src="./image/主辦單位/dct.png" ></logo>
-                            </div>
+                            </a>
                         </div>
                     </div>
         
@@ -980,12 +1001,24 @@
                         <div class="box-title T-E">Co-organizers</div>
                         <div class="box-title T-C">協辦單位</div>
                         <div class="row justify-content-around">
-                            <div class="col-9 col-md-5 row justify-content-center" style="margin: 10% 0; align-items: center;">
-                                <logo><img class="img-fluid" style="width: 100%;" src="./image/sponsor logo/FB_ITSA_bar.png" ></logo>
-                            </div>
-                            <div class="col-9 col-md-5 row justify-content-center" style="margin: 10% 0; align-items: center;">
+                            <a class="col-9 col-md-5 row justify-content-center" style="margin: 10% 0; align-items: center;" href="https://www.itsa.org.tw/itsa/index.php" target="_blank">
+                                <logo><img class="img-fluid" style="width: 100%;" src="./image/sponsor logo/FB_ITSA_bar1.png" ></logo>
+                            </a>
+                            <a class="col-9 col-md-5 row justify-content-center" style="margin: 10% 0; align-items: center;" href="https://uc.itsa.org.tw/smart_sensor/news.php" target="_blank">
+                                <logo><img class="img-fluid" style="width: 100%;" src="./image/sponsor logo/FB_ITSA_bar2.png" ></logo>
+                            </a>
+                            <a class="col-9 col-md-5 row justify-content-center" style="margin: 10% 0; align-items: center;" href="https://taiwanchi.org/" target="_blank">
                                 <logo><img class="img-fluid" style="width: 100%;"  src="./image/sponsor logo/TAICHI_Logo(橫).png" ></logo>
-                            </div>
+                            </a>
+                            <a class="col-9 col-md-5 row justify-content-center" style="margin: 10% 0; align-items: center;" href="https://www.csie.ntu.edu.tw/" target="_blank">
+                                <logo><img class="img-fluid" style="width: 100%;"  src="./image/sponsor logo/ntu_csie.png" ></logo>
+                            </a>
+                            <a class="col-9 col-md-5 row justify-content-center" style="margin: 10% 0; align-items: center;" href="https://www.ait.org.tw/zhtw/american-innovation-center-aic-zh/" target="_blank">
+                                <logo><img class="img-fluid" style="width: 100%;"  src="./image/sponsor logo/co-organizer-AIC.webp" ></logo>
+                            </a>
+                            <a class="col-9 col-md-5 row justify-content-center" style="margin: 10% 0; align-items: center;" href="https://www.ait.org.tw/zhtw/" target="_blank">
+                                <logo><img class="img-fluid" style="width: 100%;"  src="./image/sponsor logo/co-organizer-AIT.png" ></logo>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -998,15 +1031,12 @@
                     <div class="box-title T-E">Sponsors</div>
                     <div class="box-title T-C">贊助單位</div>
                     <div class="row justify-content-around">
-                        <div class="col-7 col-md-4 row justify-content-center" style="margin: 10% 0; align-items: center;">
-                            <logo><img class="img-fluid" style="width: 100%;" src="./image/sponsor logo/AJA.png" ></logo>
-                        </div>
-                        <!-- <div class="col-11 col-md-5 row justify-content-center" style="margin: 10% 0;">
-                            <img class="img-fluid" src="./image/sponsor logo/機器人王國.png" >
-                        </div> -->
-                        <div class="col-7 col-md-4 row justify-content-center" style="margin: 10% 0; align-items: center;">
+                        <a class="col-7 col-md-4 row justify-content-center" style="margin: 10% 0; align-items: center; width: 100%;" href="https://www.aja-creative.com/zh_tw/" target="_blank">
+                            <logo style="width: 100%;"><img class="img-fluid" style="width: 100%;" src="./image/sponsor logo/ajaLogo.svg" ></logo>
+                        </a>
+                        <a class="col-7 col-md-4 row justify-content-center" style="margin: 10% 0; align-items: center;" href="https://cavedu.com/" target="_blank">
                             <logo><img class="img-fluid" style="width: 100%;" src="./image/sponsor logo/CAVEDU.png" ></logo>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1018,7 +1048,7 @@
                     <img src="image/logo.png" class="logo">
                     <p style="text-align: center;">
                         OPEN HCI<br>
-                        <a href="https://www.2021.openhci.com/" target="_blank" class="link-light">2021</a> | 
+                        <a href="https://openchi-2021.netlify.app/" target="_blank" class="link-light">2021</a> | 
                         <a href="https://www.2019.openhci.com/" target="_blank" class="link-light">2019</a> | 
                         <a href="https://www.2018.openhci.com/" target="_blank" class="link-light">2018</a> | 
                         <a href="https://www.2017.openhci.com/" target="_blank" class="link-light">2017</a> |<br> 
@@ -1097,7 +1127,6 @@
         crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script>
         <!-- GSAP -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
         <!-- three.js -->
@@ -1105,15 +1134,14 @@
         <script type="importmap">
             {
                 "imports": {
-                "three": "https://unpkg.com/three@0.142.0/build/three.module.js",
-                "smoothscroll-polyfill": "https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+                "three": "https://unpkg.com/three@0.142.0/build/three.module.js"
                 }
             }
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+        <script src="js/smoothscroll.js"></script>
         <script type="module" src="js/tower.js"></script>
         <script type="module" src="js/main.js"></script>
-        
     </body>    
-
+    
 </html>
