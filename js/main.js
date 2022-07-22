@@ -15,8 +15,8 @@ function detectiOS() {
         //alert("ios");
         //let scroll = new SmoothScroll('html', {easing: 'linear'});
         //smoothscroll.polyfill;
-        //IOS = true;
-        //setHTML.style.scrollBehavior = 'smooth';
+        IOS = true;
+        setHTML.style.scrollBehavior = 'smooth';
       }
 }
 detectiOS();
