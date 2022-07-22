@@ -62,41 +62,41 @@ body {
 
 .background_test .air.air1 {
   -webkit-animation: wave 30s linear infinite;
-  animation: wave 30s linear infinite;
+          animation: wave 30s linear infinite;
   z-index: 1000;
   opacity: 1;
   -webkit-animation-delay: 0s;
-  animation-delay: 0s;
+          animation-delay: 0s;
   bottom: 0;
 }
 
 .background_test .air.air2 {
   -webkit-animation: wave2 15s linear infinite;
-  animation: wave2 15s linear infinite;
+          animation: wave2 15s linear infinite;
   z-index: 999;
   opacity: 0.5;
   -webkit-animation-delay: -5s;
-  animation-delay: -5s;
+          animation-delay: -5s;
   bottom: 10px;
 }
 
 .background_test .air.air3 {
   -webkit-animation: wave 30s linear infinite;
-  animation: wave 30s linear infinite;
+          animation: wave 30s linear infinite;
   z-index: 998;
   opacity: 0.2;
   -webkit-animation-delay: -2s;
-  animation-delay: -2s;
+          animation-delay: -2s;
   bottom: 15px;
 }
 
 .background_test .air.air4 {
   -webkit-animation: wave2 5s linear infinite;
-  animation: wave2 5s linear infinite;
+          animation: wave2 5s linear infinite;
   z-index: 997;
   opacity: 0.7;
   -webkit-animation-delay: -5s;
-  animation-delay: -5s;
+          animation-delay: -5s;
   bottom: 20px;
 }
 
@@ -108,6 +108,7 @@ body {
     background-position-x: 1000px;
   }
 }
+
 @keyframes wave {
   0% {
     background-position-x: 0px;
@@ -343,7 +344,7 @@ t-14 {
   margin: 0 1vw;
   border-radius: 16px;
   -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   color: white;
   list-style-type: circle;
   font-size: 2vw;
@@ -387,6 +388,8 @@ t-14 {
   margin: 30px 0 15px;
 }
 
+
+
 /* 行事曆用白色分隔線 */
 white-line {
   border-top: 1px solid #FFFFFF;
@@ -426,7 +429,7 @@ white-line {
   text-align: justify;
   text-justify: distribute-all-lines;
   -moz-text-align-last: justify;
-  text-align-last: justify;
+       text-align-last: justify;
 }
 
 /* 手機 */
@@ -728,7 +731,7 @@ white-line {
 .organizer_box {
   width: 100%;
   height: 20vh;
-  background: linear-gradient(rgba(200, 200, 200, 0) 0%, rgba(200, 200, 200, 0.3) 30%, rgba(200, 200, 200, 0.5) 80%, rgba(200, 200, 200, 0.5) 100%);
+  background: linear-gradient(rgba(200, 200, 200, 0) 0%, rgba(200, 200, 200, 0.3) 30%,rgba(200, 200, 200, 0.5) 80%,rgba(200, 200, 200, 0.5) 100%);
   -webkit-backdrop-filter: unset;
   backdrop-filter: unset;
 }
@@ -743,9 +746,9 @@ white-line {
       rgba(200, 200, 200, 0.5) 30%, rgba(200, 200, 200, 0.3) 60%, 
       rgba(200, 200, 200, 0) 75%, rgba(200, 200, 200, 0) 100%); */
   /* backdrop-filter: blur(3px); */
-  background: rgba(200, 200, 200, 0.5);
+  background: rgba(200, 200, 200, 0.5) ;
   -webkit-backdrop-filter: unset;
-  backdrop-filter: unset;
+          backdrop-filter: unset;
   padding-bottom: 0%;
 }
 
@@ -760,7 +763,7 @@ white-line {
   background: linear-gradient(rgba(200, 200, 200, 0.5) 50%, rgba(200, 200, 200, 0.5) 100%);
   /* backdrop-filter: blur(4px); */
   -webkit-backdrop-filter: unset;
-  backdrop-filter: unset;
+          backdrop-filter: unset;
 }
 
 #contant .card_e {
@@ -769,7 +772,7 @@ white-line {
   float: right;
   background: linear-gradient(rgba(200, 199, 200, 0.5) 10%, rgba(120, 120, 130, 0.5) 25%, rgba(20, 20, 20, 0.5) 70%, rgba(0, 0, 0, 0.5) 100%);
   -webkit-backdrop-filter: unset;
-  backdrop-filter: unset;
+          backdrop-filter: unset;
 }
 
 /* 導引列all */
@@ -1105,7 +1108,7 @@ white-line {
   }
   .ID_Card_Q2 {
     -webkit-margin-start: 2%;
-    margin-inline-start: 2%;
+            margin-inline-start: 2%;
   }
   /* 導引列用 */
   .side-nav {
@@ -1180,10 +1183,11 @@ white-line {
   .carousel-inner {
     padding-bottom: 1vh;
   }
+
   .organizer_box {
     width: 100%;
     height: 20vh;
-    background: linear-gradient(rgba(200, 200, 200, 0) 0%, rgba(200, 200, 200, 0.3) 30%, rgba(200, 200, 200, 0.5) 80%, rgba(200, 200, 200, 0.5) 100%);
+    background: linear-gradient(rgba(200, 200, 200, 0) 0%, rgba(200, 200, 200, 0.3) 30%,rgba(200, 200, 200, 0.5) 80%,rgba(200, 200, 200, 0.5) 100%);
     -webkit-backdrop-filter: unset;
     backdrop-filter: unset;
   }
@@ -1196,11 +1200,13 @@ white-line {
         rgba(200, 200, 200, 0.9) 0%, rgba(200, 200, 200, 0.7) 10%,
         rgba(200, 200, 200, 0.5) 25%, rgba(200, 200, 200, 0.2) 50%, 
         rgba(200, 200, 200, 0) 60%, rgba(200, 200, 200, 0) 100%); */
-    background: linear-gradient(rgba(200, 200, 200, 0.5) 0%, rgba(200, 200, 200, 0.5) 80%, rgba(200, 200, 200, 0.5) 100%);
+    background: linear-gradient(rgba(200, 200, 200, 0.5) 0%, rgba(200, 200, 200, 0.5) 80%,rgba(200, 200, 200, 0.5) 100%);
+  
     -webkit-backdrop-filter: unset;
-    backdrop-filter: unset;
+            backdrop-filter: unset;
     padding-bottom: 0%;
   }
+
   #Sponsors .card_e {
     width: 100%;
     align-self: flex-end;
@@ -1208,7 +1214,7 @@ white-line {
     background: linear-gradient(rgba(200, 200, 200, 0.5) 50%, rgba(200, 200, 200, 0.5) 100%);
     /* backdrop-filter: blur(4px); */
     -webkit-backdrop-filter: unset;
-    backdrop-filter: unset;
+            backdrop-filter: unset;
   }
   .card_Speaker {
     display: flex;
@@ -1240,7 +1246,8 @@ white-line {
   card-title t-16 {
     font-size: 20px;
   }
-  section {
+
+  section{
     opacity: 0;
   }
 }
@@ -1289,7 +1296,7 @@ logo {
   position: relative !important;
   opacity: 1;
   -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+          animation-duration: 2s;
   transition: opacity 2000ms ease-in;
 }
 
@@ -1299,4 +1306,4 @@ logo {
   top: 1.25%;
   left: 0;
   z-index: -1;
-} /*# sourceMappingURL=main.css.map *//*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

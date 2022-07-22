@@ -104,20 +104,23 @@ $(function() {
         $('html,body').scrollLeft(0);
         //mainTower.rotate_scroll();
         var scrollPos = $(this).scrollTop();
-        for (var i = 1; i <= 16; i++) {
-            if(scrollPos >= ah[i-1] - windowHeight/1.5){
-                $(('section:nth-of-type('+i+')')).addClass('fade_in');
-             //   console.log(scrollPos);
-             //   console.log('show');
+        if(windowWidth >= 786){
+            for (var i = 1; i <= 16; i++) {
+                if(scrollPos >= ah[i-1] - windowHeight/1.5){
+                    $(('section:nth-of-type('+i+')')).addClass('fade_in');
+                 //   console.log(scrollPos);
+                 //   console.log('show');
+                }
+            }
+    
+            for (var i = 14; i <= 15; i++) {
+                if(scrollPos >= ah[i-1] - windowHeight/1.5){
+                    //console.log('show');
+                    $('section:nth-of-type('+i+') logo').addClass('fade_in_logo');
+                }
             }
         }
-
-        for (var i = 14; i <= 15; i++) {
-            if(scrollPos >= ah[i-1] - windowHeight/1.5){
-                //console.log('show');
-                $('section:nth-of-type('+i+') logo').addClass('fade_in_logo');
-            }
-        }
+        
 
         // hide and show navbar
         let sc = $(window).scrollTop();
