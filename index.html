@@ -18,7 +18,6 @@
         <link rel="icon" type="image/x-icon" href="./image/OpenHCI22_logo.png">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script>
         <script src="https://kit.fontawesome.com/cbd91073cd.js" crossorigin="anonymous"></script>
         <title>OpenHCI 2022 | 人機互動工作坊</title>
         <link href="css/main.css" rel="stylesheet">
@@ -37,7 +36,6 @@
     
     <!-- top navbar phone -->
     <nav class="navbar sticky-top navbar-dark navbar-phone"  id="top_navbar_phone">
-        <!-- only appear when phone -->
         <a class="navbar-brand nav-link" href="#home">
             <img src="image/cyberoasis-clear.png" style="height: 80%; width:auto;"  alt="">
         </a>
@@ -47,14 +45,12 @@
     </nav>
     <!-- top navbar computer -->
     <nav class="navbar sticky-top navbar-dark navbutton-com" id="top_navbar_computer">
-        <!-- only appear when phone -->
         <a class="navbar-brand nav-link navbutton-com" href="#home">
             <img src="image/logo.png" alt="">
         </a>
         <a class="navbar-brand nav-link navbutton-com" href="#home">
             <img src="image/cyberoasis.png" alt="" style="filter: drop-shadow(0px 0px 8px #6BAC9A);">
         </a>
-        <!-- only appear when computer -->
         <a class="navbar-brand navbutton-com" style="float: right;">
             <button type="button" class="cta_btn" style="max-height: 100%;" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScXBW5Z-xjLmo55iADtUDajNS3eGo_OYl8kx2GOh-LEo0O-uA/viewform')">我要報名！</button>
         </a>
@@ -62,7 +58,6 @@
 
     <!-- bottom navbar phone -->
     <nav class="navbar navbar-dark fixed-bottom navbar-bottom-phone justify-content-end" style="background: none; padding-bottom: 5vh;" id="bottom_navbar">
-        <!-- only appear when phone -->
         <div class="navbar-brand nav-link navbar-phone menu-control menu-shadow" style="float: right;" href="#home">
             <p style="font-size: 1em;">MENU</p>
         </div>
@@ -106,10 +101,9 @@
     </nav>
     
     <div class="back-tower">
-<!--       <canvas id="tower-canvas" style="position: fixed;"></canvas> --> 
+        <canvas id="tower-canvas" style="position: fixed;"></canvas>
         <div class="background-image" width="100%" style="position: fixed;"></div>
     </div>
-    <p>test: close tower</p>
 
         <div id="home_href"></div>
         <!-- section home-->  
@@ -118,11 +112,13 @@
                 <div class="row">
                     <p>2022 OpenHCI人機互動工作坊</p>
                     <img src="image/cyberoasis.png" class="col-10" style="height: auto; filter: drop-shadow(0px 0px 24px #6BAC9A);">
-                    <img src="image/date.svg" class="col-10" style="margin-top: 10vh; max-width: 80%;">
+                    <img src="image/date.svg" class="col-10" style="margin-top: 10vh; max-width: 80%; ">
+                    <p style="font-size: 3vw;opacity: 65%; margin-top: 10em; text-align: center;"><br>若ios開啟時發生卡頓，請將系統升至最新版本，<br>或使用電腦開啟。</p>
                 </div>
             </div>
             <div class = "box main_title row" style="min-height: 60vh;">
-                <div class="box-title T-C col-md-8 align-self-start">2 0 2 2 ｜第1 2 屆 O p e n H C I 人機互動工作坊</div>
+                <div class="box-title T-C col-md-11 align-self-start" style="text-align-last:left; letter-spacing: 0.1em; line-height: 1.5em;">
+                    2 0 2 2 ｜第1 2 屆 O p e n H C I 人機互動工作坊</div>
                 <img src="image/cyberoasis.png" class="col-11 offset-col-1">
                 <nav class="side-nav col-12">
                     <ul style="list-style:none">
@@ -378,12 +374,13 @@
                 <div class="card_c">
                     <card-title><t-20>活動時間<t-20></card-title>
                     <div>
-                        <p>今年工作坊分為兩部分，共 5 天：</p>
+                        <p>今年工作坊分為兩部分，共 5 天：
                         <ls>
-                            <li>2 天的前置工作坊</li>
-                            <li>3 天的正式工作坊</li>
+                            <li>前置工作坊 2 天：<br>　8 / 13（六）～ 8 / 14（日）</li>
+                            <li>正式工作坊 3 天：<br>　8 / 26（五）～ 8 / 28（日）</li>
                         </ls>
-                        <p>全日活動時間約為 8:30～20:00 （視各組討論時間而定）。</p>    
+                        <br>全日活動時間約為 8：30 ～ 20：00 （視各組討論時間而定）。
+                        </p>    
                     </div>
 
                     <card-title><t-20>活動地點<t-20></card-title>
@@ -789,178 +786,6 @@
             <div class= "box">
                 <div class="box-title T-E">Previous Works</div>
                 <div class="box-title T-C">歷屆作品</div>
-                <div class="row  justify-content-around">
-                    <div class="col-12 col-md-6" style="margin: 0;">
-                        <div class="card_a" data-toggle="collapse" data-parent="#accordion" href="#work-1" aria-expanded="true" aria-controls="work-1">
-                            <div class="card_a_show">
-                                <a href="https://youtu.be/pCtAFKTj8-A" target="_blank">
-                                    <img class="card_g_img" src="image/work1.png" data-toggle="tooltip" data-placement="right" title="點擊圖片進入youtube"></a>
-                                <card-title><t-20>時光雞</t-20></card-title> <br>
-                                <card-title><t-16>最佳互動獎</t-16></card-title> 
-                            </div>
-                            <div id="work-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                <p>
-                                    透過 Eggy時光雞，使用者可以自訂倒數時間，當時間倒數結束，Eggy時光雞會以聲音提醒使用者物品已經長時間未使用，提供其丟棄的判斷依據；
-                                    同時透過垃圾袋自動彈出，來增加使用者將物品丟棄的動力。此外，Eggy時光雞以小雞破蛋的可愛形象與親切提示音，增加互動的趣味性。
-                                </p>
-                            </div>
-                            <div class="card_a_close">
-                                <i class="fa-solid fa-chevron-down" role="button"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6" style="margin: 0;">
-                        <div class="card_a" data-toggle="collapse" data-parent="#accordion" href="#work-2" aria-expanded="true" aria-controls="work-2">
-                            <div class="card_a_show">
-                                <a href="https://youtu.be/Bi4Os9LyU5M" target="_blank">
-                                    <img class="card_g_img" src="image/work2.png" data-toggle="tooltip" data-placement="right" title="點擊圖片進入youtube"></a>
-                                <card-title><t-20>蒲呼呼</t-20></card-title> <br>
-                                <card-title><t-16>最佳故事獎</t-16></card-title> 
-                            </div>
-                            <div id="work-2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                <p>
-                                    蒲呼呼是款讓離家子女能夠陪伴遠方家人的居家型互動燈光裝置。<br>
-                                    使用者可利用蒲呼呼錄下平時無法當面說出口的關心話語，透過「吹熄」燈光發送錄音，就像吹送蒲公英的種子，將思念傳遞給遠方的家人。
-                                    當家人在為植物澆水時，就蒙聽到語音訊息，並聯動讓使用者的蒲呼呼再度亮起。即使彼此分隔兩地，連結依舊生生不息。
-                                </p>
-                            </div>
-                            <div class="card_a_close">
-                                <i class="fa-solid fa-chevron-down" role="button"></i>
-                            </div>
-                        </div>
-                    </div>                
-                </div>
-                <div class="row  justify-content-around">
-                    <div class="col-12 col-md-6" style="margin: 0;">
-                        <div class="card_a" data-toggle="collapse" data-parent="#accordion" href="#work-3" aria-expanded="true" aria-controls="work-3">
-                            <div class="card_a_show">
-                                <a href="https://youtu.be/icHVRLLE944" target="_blank">
-                                    <img class="card_g_img" src="image/work3.png" data-toggle="tooltip" data-placement="right" title="點擊圖片進入youtube"></a>
-                                <card-title><t-20>READEE</t-20></card-title> <br>
-                                <card-title><t-16>最佳簡報獎</t-16></card-title> 
-                            </div>
-                            <div id="work-3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                <p>
-                                    經典，人們都認同其存在之重要性，卻深埋在彼此都不願碰觸的地底深處。
-                                    呼應此次「莫比烏斯」舊物再造之精神,我們團隊將「出土」經典，向大眾推廣並協助他們理解經典。
-                                    Readee將讓您體會到，經典便在生活之中，在我們的周遭，理解它不再是遙不可及的夢想！
-                                </p>
-                            </div>
-                            <div class="card_a_close">
-                                <i class="fa-solid fa-chevron-down" role="button" ></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6" style="margin: 0;">
-                        <div class="card_a" data-toggle="collapse" data-parent="#accordion" href="#work-4" aria-expanded="true" aria-controls="work-4">
-                            <div class="card_a_show">
-                                <a href="https://youtu.be/Av9xV6ZbyhY" target="_blank">
-                                    <img class="card_g_img" src="image/work4.png" data-toggle="tooltip" data-placement="right" title="點擊圖片進入youtube"></a>
-                                <card-title><t-20>尋找湖泊</t-20></card-title> <br>
-                                <card-title><t-16>最佳造型獎</t-16></card-title> 
-                            </div>
-                            <div id="work-4" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                <p>
-                                    找到心的平靜 感受成長後的自己<br><br>
-                                    我們如何幫助陷入失戀低潮者梳理混沌思緒、走出低潮迴圈？<br><br>
-                                    「尋找湖泊」是一趟有終點的旅行。提供失戀者在旅途中透過語音心情記錄、沙遊世界建構、寄送與簽收他人沙遊風景明信片、
-                                    與角色問答及反思等過程中進行自我覺察、釐清低潮時的混沌思緒,並勇於主動走到戶外體驗新環境跳脫迴圈場景。
-                                    希望所有失戀者在旅程盡頭之處抵達象徵內心的湖泊時,能找到屬於自己的平靜、感受成長後的自己。
-                                </p>
-                            </div>
-                            <div class="card_a_close">
-                                <i class="fa-solid fa-chevron-down" role="button"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row  justify-content-around">
-                    <div class="col-12 col-md-6" style="margin: 0;">
-                        <div class="card_a" data-toggle="collapse" data-parent="#accordion" href="#work-5" aria-expanded="true" aria-controls="work-5">
-                            <div class="card_a_show">
-                                <a href="https://youtu.be/-8GBYjpyL1c" target="_blank">
-                                    <img class="card_g_img" src="image/work5.png" data-toggle="tooltip" data-placement="right" title="點擊圖片進入youtube"></a>
-                                <card-title><t-20>memoscape.</t-20></card-title> <br>
-                                <card-title><t-16>最佳切題獎</t-16></card-title> 
-                            </div>
-                            <div id="work-5" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                <p>
-                                    「將日常回憶編織成一幅最美的風景。」<br><br>
-                                    回憶,是日常的點滴，是經驗的積累，承載了人與人之間的羈絆，見證了痛苦、歡笑與成長。回憶，
-                                    是舊的情感再度被喚起，是過去的種種再度陪伴身旁，時時提醒我們初衷，成為我們的精神支柱。
-                                    但回憶不易保存，想要憶起過往也時常遇到重重阻礙，失去記憶讓我們忽視，生活的時時刻刻都十足珍貴。
-                                    因此，我們設計了「memoscape」,融合了底片機與場記板，暗喻剪接珍貴的日常生活；
-                                    同時結合記憶與日曆，將生活日常回憶化，打造出一張張刻錄生活、獨一無二的日曆卡。
-                                    日曆卡拼接成畫，隨著日子的流逝，創造出僅屬於自己，一幅最美的風景。 讓使用者在不斷前進時，也可以感受到過往的溫度。<br><br>
-                                    日子層層疊疊，過去的記憶形塑我們如今的樣貌，銘記每一天的重要的時刻，就是珍視一路走來的自己。
-                                </p>
-                            </div>
-                            <div class="card_a_close">
-                                <i class="fa-solid fa-chevron-down" role="button"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6" style="margin: 0;">
-                        <div class="card_a" data-toggle="collapse" data-parent="#accordion" href="#work-6" aria-expanded="true" aria-controls="work-6">
-                            <div class="card_a_show">
-                                <a href="https://youtu.be/WEA_fWzaCG0" target="_blank">
-                                    <img class="card_g_img" src="image/work6.png" data-toggle="tooltip" data-placement="right" title="點擊圖片進入youtube"></a>
-                                <card-title><t-20>Walking Workie</t-20></card-title> <br>
-                                <card-title><t-16>最佳技術獎</t-16></card-title> 
-                            </div>
-                            <div id="work-6" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                <p>
-                                    疫情時代，遠距工作成為主流之一，改變實體辦公室中既有的互動關係，人與人之間的溝通習慣也被迫重新建立。
-                                    以此為出發點，我們設計出「Walking Workie」，一個桌上型互動裝置，讓你化身為虛擬小人，在上班時間於裝置中漫步，
-                                    並在其中關心同事的工作狀態，重建辦公室陪伴感，並讓團隊增進對彼此的理解與信任。
-                                </p>
-                            </div>
-                            <div class="card_a_close">
-                                <i class="fa-solid fa-chevron-down" role="button"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row  justify-content-around">
-                    <div class="col-12 col-md-6" style="margin: 0;">
-                        <div class="card_a" data-toggle="collapse" data-parent="#accordion" href="#work-7" aria-expanded="true" aria-controls="work-7">
-                            <div class="card_a_show">
-                                <a href="https://youtu.be/ZOiKG2sW1_0" target="_blank">
-                                    <img class="card_g_img" src="image/work7.png" data-toggle="tooltip" data-placement="right" title="點擊圖片進入youtube"></a>
-                                <card-title><t-20>氛享</t-20></card-title> <br>
-                                <card-title><t-16>最佳人氣獎</t-16></card-title> 
-                            </div>
-                            <div id="work-7" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                <p>
-                                    用氣氛連結人與人之間最真誠的感受，創造溫暖的互動氛圍，進而讓年輕人獲得認同感。<br>
-                                    #安心分享 #香氣回饋 #嗅覺體驗
-                                </p>
-                            </div>
-                            <div class="card_a_close">
-                                <i class="fa-solid fa-chevron-down" role="button"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6" style="margin: 0;">
-                        <div class="card_a" data-toggle="collapse" data-parent="#accordion" href="#work-8" aria-expanded="true" aria-controls="work-8">
-                            <div class="card_a_show">
-                                <a href="https://youtu.be/YgKbFm13u4E" target="_blank">
-                                    <img class="card_g_img" src="image/work8.png" data-toggle="tooltip" data-placement="right" title="點擊圖片進入youtube"></a>
-                                <card-title><t-20>憶起亂掰</t-20></card-title> <br>
-                                <card-title><t-16>最佳Demo獎</t-16></card-title> 
-                            </div>
-                            <div id="work-8" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                <p>
-                                    現代的生活忙碌，人們已經習慣於科技幫助我們保存生活中的回憶，然而科技呈現回憶的方式無法激起人們的情緒感受，
-                                    我們好奇，有沒有一種可以激起人們情緒感受的回憶方式？
-                                </p>
-                            </div>
-                            <div class="card_a_close">
-                                <i class="fa-solid fa-chevron-down" role="button" ></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -1004,20 +829,23 @@
                             <a class="col-9 col-md-5 row justify-content-center" style="margin: 10% 0; align-items: center;" href="https://www.itsa.org.tw/itsa/index.php" target="_blank">
                                 <logo><img class="img-fluid" style="width: 100%;" src="./image/sponsor logo/FB_ITSA_bar1.png" ></logo>
                             </a>
-                            <a class="col-9 col-md-5 row justify-content-center" style="margin: 10% 0; align-items: center;" href="https://uc.itsa.org.tw/smart_sensor/news.php" target="_blank">
+                            <!-- <a class="col-9 col-md-5 row justify-content-center" style="margin: 10% 0; align-items: center;" href="https://uc.itsa.org.tw/smart_sensor/news.php" target="_blank">
                                 <logo><img class="img-fluid" style="width: 100%;" src="./image/sponsor logo/FB_ITSA_bar2.png" ></logo>
+                            </a> -->
+                            <a class="col-9 col-md-5 row justify-content-center" style="margin: 10% 0; align-items: center;" href="https://uc.itsa.org.tw/smart_sensor/news.php" target="_blank">
+                                <logo><img class="img-fluid" style="width: 100%;" src="./image/sponsor logo/ITSA Logo.png" ></logo>
                             </a>
                             <a class="col-9 col-md-5 row justify-content-center" style="margin: 10% 0; align-items: center;" href="https://taiwanchi.org/" target="_blank">
                                 <logo><img class="img-fluid" style="width: 100%;"  src="./image/sponsor logo/TAICHI_Logo(橫).png" ></logo>
                             </a>
-                            <a class="col-9 col-md-5 row justify-content-center" style="margin: 10% 0; align-items: center;" href="https://www.csie.ntu.edu.tw/" target="_blank">
+                            <a class="col-10 col-md-5 row justify-content-center" style="margin: 10% 0; align-items: center;" href="https://www.csie.ntu.edu.tw/" target="_blank">
                                 <logo><img class="img-fluid" style="width: 100%;"  src="./image/sponsor logo/ntu_csie.png" ></logo>
                             </a>
                             <a class="col-9 col-md-5 row justify-content-center" style="margin: 10% 0; align-items: center;" href="https://www.ait.org.tw/zhtw/american-innovation-center-aic-zh/" target="_blank">
-                                <logo><img class="img-fluid" style="width: 100%;"  src="./image/sponsor logo/co-organizer-AIC.webp" ></logo>
+                                <logo><img class="img-fluid" style="width: 100%;"  src="./image/sponsor logo/AIC.png" ></logo>
                             </a>
                             <a class="col-9 col-md-5 row justify-content-center" style="margin: 10% 0; align-items: center;" href="https://www.ait.org.tw/zhtw/" target="_blank">
-                                <logo><img class="img-fluid" style="width: 100%;"  src="./image/sponsor logo/co-organizer-AIT.png" ></logo>
+                                <logo><img class="img-fluid" style="width: 100%;"  src="./image/sponsor logo/AIT.png" ></logo>
                             </a>
                         </div>
                     </div>
@@ -1036,6 +864,12 @@
                         </a>
                         <a class="col-7 col-md-4 row justify-content-center" style="margin: 10% 0; align-items: center;" href="https://cavedu.com/" target="_blank">
                             <logo><img class="img-fluid" style="width: 100%;" src="./image/sponsor logo/CAVEDU.png" ></logo>
+                        </a>
+                        <a class="col-10 col-md-5 row justify-content-center" style="margin: 10% 0; align-items: center;" href="https://begonia-design.com.tw/" target="_blank">
+                            <logo><img class="img-fluid" style="width: 100%;" src="./image/sponsor logo/海棠.png" ></logo>
+                        </a>
+                        <a class="col-7 col-md-5 row justify-content-center" style="margin: 10% 0; align-items: center;" href="https://corp.104.com.tw/zh/home/" target="_blank">
+                            <logo><img class="img-fluid" style="width: 100%;" src="./image/sponsor logo/104.png" ></logo>
                         </a>
                     </div>
                 </div>
@@ -1139,7 +973,6 @@
             }
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
-        <script src="js/smoothscroll.js"></script>
         <script type="module" src="js/tower.js"></script>
         <script type="module" src="js/main.js"></script>
     </body>    
